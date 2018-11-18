@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Footer = ({ siteTitle }) => (
-    <footer class="footer">
-        <div class="container">
+    <footer className="footer">
+        <div className="container">
             <small>Made by: <strong>Lee Howard</strong></small>
         </div>
     </footer>
