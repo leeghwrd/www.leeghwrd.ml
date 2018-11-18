@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
   <nav className="nav">
         <div className="nav-container">
             <div className="brand">
-                <Link to="/" tabIndex="0"><img src={brandImg} className="brand-icon" alt="brand"/><span>{siteTitle}</span></Link>
+                <Link to="/"><img src={brandImg} className="brand-icon" alt="brand"/><span>{siteTitle}</span></Link>
             </div>
             <div className="links">
                     <Link to="/articles/">Articles</Link>
