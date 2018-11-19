@@ -1,35 +1,49 @@
 import React from "react"
-import { graphql } from "gatsby"
-import PostLink from "../components/post-link"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
 
-import Layout from '../components/layout'
+export default ({ data }) => {
+  return (
+    <Layout>
+      <div>
+        <h1>
+          Articles
+        </h1>
+        <h4>Total: {data.allMarkdownRemark.totalCount}</h4>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link to={node.fields.slug}>
 
-const Articles = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-
-  return <Layout>{Posts}</Layout>
+              <h3>
+                {node.frontmatter.title}{" "}
+                <span>
+                  — {node.frontmatter.date}
+                </span>
+              </h3>
+              <p>{node.excerpt}</p>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </Layout>
+  )
 }
 
-export default Articles
-
-export const pageQuery = graphql`
+export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
             title
+            date(formatString: "DD MMMM, YYYY")
           }
+          fields {
+            slug
+          }
+          excerpt
         }
       }
     }
