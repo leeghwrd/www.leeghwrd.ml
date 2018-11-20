@@ -15,23 +15,24 @@ export default class SearchIndex extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          style={{
-            position: `relative`,
-          }}
-          type="text"
-          placeholder="Type title words or tags"
-          value={this.state.query}
-          onChange={this.search}
-        />
-        <ul
-          style={{
-            position: `absolute`,
-            backgroundColor: `white`,
-            marginLeft: `0`,
-          }}
-        >
+        <header className="search-enabled">
+          <h1>Articles</h1>
+
+        <form
+          id="search-form"
+          role="search"
+          className="search-form"
+          >
+            <div className="search-wrapper">
+              <input
+                id="filter"
+                type="search"
+                placeholder="Filter"
+                value={this.state.query}
+                onChange={this.search}
+                />
+                <i className="search-icon icon-search"></i>
+         <ul>
           {this.state.results.map(page => (
             <li key={page.id}>
               <Link to={`/` + page.path}>{page.title}</Link>
@@ -39,7 +40,10 @@ export default class SearchIndex extends Component {
             </li>
           ))}
         </ul>
-      </div>
+        </div>
+          </form>
+        </header>
+
     )
   }
 
