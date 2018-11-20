@@ -205,6 +205,99 @@ blockquote cite {
     color: #111;
 }
 
+.search-enabled {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.search-enabled h1 {
+    margin-bottom: 1rem;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper [type=search] {
+    -webkit-appearance: none;
+    padding-right: 2rem;
+}
+
+.search-form [type=search] {
+    width: auto;
+    background: #f2f2f2;
+    border: 0;
+}
+
+[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], select, textarea {
+    display: block;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    padding: .75rem;
+    outline: none;
+    background: #f2f2f2;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1;
+}
+
+.search-icon {
+    position: absolute;
+    right: .6rem;
+    top: calc(50% - .5em);
+}
+
+.post {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 4px;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.post-thumbnail {
+    width: 30px;
+    margin-right: 1.3rem;
+}
+
+.post-thumbnail img {
+    display: block;
+}
+
+.post-title, a.post-title {
+    display: block;
+}
+.post-title {
+    -ms-flex: 2;
+    flex: 2;
+    font-weight: 500;
+    color: #333;
+}
+
+.post-date {
+    color: #888;
+    display: none;
+}
+
+.post:hover {
+    background: #f2f2f2;
+    text-decoration: none!important;
+}
+
+
 @media (min-width: 700px) {
 
     .nav .nav-container .links a:hover {
@@ -267,6 +360,19 @@ blockquote cite {
     blockquote {
         font-size: 1.4rem;
         line-height: 1.5;
+    }
+
+    .search-enabled {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .search-enabled h1 {
+        margin-bottom: 0;
+    }
+
+    .post-date, .post-description {
+        display: block;
     }
 
 }
