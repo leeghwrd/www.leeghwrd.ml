@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SearchQuery from "../components/searchQuery";
-import nginixBrand from '../images/nginx.png'
 
 export default function Index({ data }) {
   
@@ -19,7 +18,7 @@ export default function Index({ data }) {
          
               <Link to={post.frontmatter.path} key={post.id} className="post">
         <div className="post-thumbnail">
-          <img src={nginixBrand} alt="post"></img>
+          <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
         </div>
           <div className="post-title">{post.frontmatter.title}</div>
   <span className="post-date"><time>{post.frontmatter.date}</time></span>
@@ -45,6 +44,14 @@ export const pageQuery = graphql`
             title
             path
             date
+            thumbnail {
+              childImageSharp {
+									id
+                fluid {                 
+                  src                  
+                }
+              }
+            }
           }
         }
       }
