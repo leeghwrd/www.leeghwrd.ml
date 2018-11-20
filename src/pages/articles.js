@@ -35,7 +35,7 @@ Index.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___path] }) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 250)
@@ -43,7 +43,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date
+            date(formatString: "dddd MMMM DD YYYY")
             thumbnail {
               childImageSharp {
 									id
