@@ -11,6 +11,8 @@ export default function Index({ data }) {
     <Layout>
 
       <SearchQuery />
+      <small>total: <strong>{data.allMarkdownRemark.totalCount}</strong></small>
+
       <section className="list">
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
@@ -35,7 +37,8 @@ Index.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___path] }) {
+      totalCount
       edges {
         node {
           excerpt(pruneLength: 250)
@@ -43,7 +46,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date(formatString: "dddd MMMM DD YYYY")
+            date(formatString: "dddd DD MMMM YYYY")
             thumbnail {
               childImageSharp {
 									id
