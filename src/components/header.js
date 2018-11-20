@@ -9,8 +9,8 @@ const Header = ({ siteTitle }) => (
                 <Link to="/"><img src={brandImg} className="brand-icon" alt="brand"/><span>{siteTitle}</span></Link>
             </div>
             <div className="links">
+                    <Link to="/about/">About me</Link>
                     <Link to="/articles/">Articles</Link>
-                    <Link to="/projects/">Projects</Link>
                     <Link to="/resources/">Resources</Link>
             </div>
             <div className="extra">
