@@ -27,9 +27,10 @@ export default class SearchIndex extends Component {
               <input
                 id="filter"
                 type="search"
-                placeholder="Filter"
+                placeholder=":offline"
                 value={this.state.query}
                 onChange={this.search}
+                disabled
                 />
                 <i className="search-icon icon-search"></i>
          <ul>
