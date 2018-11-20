@@ -13,10 +13,7 @@ const SearchQuery = () => (
     `}
     render={data => (
       <>
-        <div>
-    <SearchIndex searchIndex={data.siteSearchIndex.index} />
-        </div>
-        
+    <SearchIndex searchIndex={data.siteSearchIndex.index} />        
       </>
     )}
   />
