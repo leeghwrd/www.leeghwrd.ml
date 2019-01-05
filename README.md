@@ -10,4 +10,5 @@ Gatsby powered blog, and personal portfolio site I created totally based off htt
   - [ ] Fix time format on post page.
   - [ ] Adjust vertical spacing between elements.
   - [ ] Decide best prismjs theme.
-- [ ] Proto layout of home page. 
+- [ ] Proto layout of home page.
+- [ ] Proto layout of resources page.
