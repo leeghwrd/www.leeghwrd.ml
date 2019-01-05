@@ -11,13 +11,11 @@ export default function Index({ data }) {
     <Layout>
 
       <SearchQuery />
-      <small>total: <strong>{data.allMarkdownRemark.totalCount}</strong></small>
-
+     
       <section className="list">
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
-         
               <Link to={post.frontmatter.path} key={post.id} className="post">
         <div className="post-thumbnail">
           <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
@@ -37,7 +35,7 @@ Index.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___path] }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       totalCount
       edges {
         node {
@@ -47,6 +45,7 @@ export const pageQuery = graphql`
             title
             path
             date(formatString: "dddd DD MMMM YYYY")
+            yearSlug
             thumbnail {
               childImageSharp {
 									id
