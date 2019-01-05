@@ -297,6 +297,15 @@ blockquote cite {
     text-decoration: none!important;
 }
 
+.single-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.single-header h1 {
+    margin: .5rem 0;
+
+}
 
 @media (min-width: 700px) {
 
@@ -373,6 +382,10 @@ blockquote cite {
 
     .post-date, .post-description {
         display: block;
+    }
+
+    .single-header {
+        text-align: left;
     }
 
 }
