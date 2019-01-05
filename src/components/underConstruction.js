@@ -30,25 +30,25 @@ const UnderConstruction = () => (
   >
   <Link to="/about"><button style={{
       backgroundColor: `#d3d3d3`,
-      color: `#111`,
+      color: `#333`,
       width: 100,
       height: `auto`,
       margin: `0 20px`,
       padding: 10,
       border: `1px solid #f3f3f3`,
-      borderRadius: 40
+      borderRadius: 5
     }}
   >About Me</button></Link>
   
   <Link to="/articles"><button style={{
       backgroundColor: `#d3d3d3`,
-      color: `#111`,
+      color: `#333`,
       width: 100,
       height: `auto`,
       margin: `0 20px`,
       padding: 10,
       border: `1px solid #f3f3f3`,
-      borderRadius: 40
+      borderRadius: 5
     }}
   >Artciles</button></Link>
   </div>
