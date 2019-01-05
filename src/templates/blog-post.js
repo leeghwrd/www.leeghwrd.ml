@@ -17,6 +17,9 @@ export default function Template({ data }) {
       <header className="single-header">
         <img alt="Post Graphics" width="50" height="50" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
         <h1>{post.frontmatter.title}</h1>
+        <div className="date">
+        <time>{post.frontmatter.date}</time>
+        </div>
       </header>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
