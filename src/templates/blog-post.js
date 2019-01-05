@@ -12,8 +12,12 @@ export default function Template({ data }) {
     <Layout>
       <Helmet title={`Lee Howard | ${post.frontmatter.title}`} />
       <article className="article">
+
       <div className="container">
+      <header className="single-header">
+        <img alt="Post Graphics" width="50" height="50" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
         <h1>{post.frontmatter.title}</h1>
+      </header>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </article>
@@ -33,6 +37,14 @@ export const pageQuery = graphql`
         path
         title
         date
+        thumbnail {
+          childImageSharp {
+              id
+            fluid {                 
+              src                  
+            }
+          }
+        }
       }
     }
   }
