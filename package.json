@@ -5,23 +5,24 @@
   "author": "lee howard <lee@lghoward.com>",
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.1.1",
-    "gatsby": "^2.0.50",
+    "gatsby": "^2.0.85",
     "gatsby-cli": "^2.4.8",
-    "gatsby-image": "^2.0.15",
-    "gatsby-plugin-catch-links": "^2.0.8",
-    "gatsby-plugin-favicon": "^3.1.4",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.11",
-    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-image": "^2.0.25",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-favicon": "^3.1.5",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.21",
+    "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-transformer-remark": "^2.1.12",
-    "gatsby-transformer-sharp": "^2.1.4",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.19",
+    "gatsby-transformer-sharp": "^2.1.10",
     "prismjs": "^1.15.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "sharp": "^0.21.1"
   },
   "keywords": [
     "gatsby"
@@ -35,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "prettier": "^1.15.3"
   },
   "repository": {
     "type": "git",
