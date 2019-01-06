@@ -71,6 +71,10 @@ blockquote cite {
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
+pre[class*="language-"] {
+    margin: 3rem 0;
+}
+
 /*  NEED TO CREATE PALLETE MAYBE? */
 .blue {
     color: #0077b5; /* LinkedIn Blue */
@@ -311,6 +315,15 @@ blockquote cite {
     font-weight: bold;
     font-size: .9rem;
 }
+.article h2 {
+    margin: 0 0 .5rem 0;
+}
+.article h3 {
+    margin: 0 0 .5rem 0;
+}
+.article p {
+    margin: 0 0 2.5rem;
+}
 
 @media (min-width: 700px) {
 
@@ -393,6 +406,12 @@ blockquote cite {
         text-align: left;
     }
 
+    .article h2 {
+        margin: 0 0 .8rem 0;
+    }
+    .article h3 {
+        margin: 0 0 .8rem 0;
+    }
 }
 
 
