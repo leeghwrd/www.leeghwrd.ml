@@ -44,7 +44,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date(formatString: "dddd DD MMMM YYYY")
+            date(formatString: "MMMM DD, YYYY")
             yearSlug
             thumbnail {
               childImageSharp {
