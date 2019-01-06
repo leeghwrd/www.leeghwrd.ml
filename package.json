@@ -1,7 +1,7 @@
 {
   "name": "lghoward.com",
   "description": "Blog and Personal Portfolio",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "author": "lee howard <lee@lghoward.com>",
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.1.1",
