@@ -306,6 +306,11 @@ blockquote cite {
     margin: .5rem 0;
 
 }
+.post-page-date {
+    color: #888;
+    font-weight: bold;
+    font-size: .9rem;
+}
 
 @media (min-width: 700px) {
 

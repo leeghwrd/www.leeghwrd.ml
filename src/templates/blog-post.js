@@ -17,9 +17,7 @@ export default function Template({ data }) {
       <header className="single-header">
         <img alt="Post Graphics" width="50" height="50" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
         <h1>{post.frontmatter.title}</h1>
-        <div className="date">
-        <time>{post.frontmatter.date}</time>
-        </div>
+        <time className="post-page-date">{post.frontmatter.date}</time>
       </header>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
@@ -39,7 +37,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
-        date
+        date(formatString: "MMMM DD, YYYY")
         thumbnail {
           childImageSharp {
               id
