@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
     line-height: 1.3;
-    color: #111;
+    color: #555;
 }
 
 h1 {
@@ -383,7 +383,7 @@ pre[class*="language-"] {
 
     #main-content {
         /* margin-top: 70px; */
-        padding: 150px 0 0;     /* add amount from disabled margin-top.*/
+        padding: 170px 0 0;     /* add amount from disabled margin-top.*/
     }
 
     #main-content h1 {
@@ -429,6 +429,10 @@ pre[class*="language-"] {
     }
     .article h3 {
         margin: 0 0 .8rem 0;
+    }
+
+    #resources h1 {
+        margin-bottom: 4rem;
     }
 
     #resources h2 {
@@ -478,6 +482,11 @@ pre[class*="language-"] {
 
     .nav a.nav-icon {
         padding: .8rem;
+    }
+
+    #main-content {
+        /* margin-top: 70px; */
+        padding: 8rem 0 0 0;     /* add amount from disabled margin-top.*/
     }
 
 }
