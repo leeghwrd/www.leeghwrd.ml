@@ -4,13 +4,12 @@ import { Link } from 'gatsby'
 
 const Resources = () => (
   <Layout>
+    <div id="resources">
    <h1>Resources</h1>
-   <ul>
       <h2>Tools</h2>
         <ul>
           <li><Link to="https://www.google.com">Google</Link> - Everyone needs to search for something from time to time.</li>
           <li><Link to="https://code.visualstudio.com">VSCode</Link> - Great code editor, I use this for web development on mac.</li>
-          <li></li>
         </ul>
    <h2>Music</h2>
    <ul>
@@ -20,8 +19,7 @@ const Resources = () => (
    <ul>
    <li><Link to="https://docs.swift.org/swift-book/TheSwiftProgrammingLanguageSwift42.epub">Swift programming language</Link> - Apple's awesome programming language.</li>
    </ul>
-   </ul>
-
+   </div>
   </Layout>
 )
 
