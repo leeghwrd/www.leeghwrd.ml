@@ -3,7 +3,7 @@
 Gatsby powered blog, and personal portfolio site I created totally based off https://www.taniarascia.com/ - a totally awesome blog, from another self taught developer.
 
 ## To-Do
-- [ ] Update dependencies without breaking.
+- [x] Update dependencies without breaking.
 - [x] First draft of About Me.
 - [x] Add syntax highlighting.
 - [x] Finish Post pages.
