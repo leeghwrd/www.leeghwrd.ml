@@ -189,6 +189,7 @@ pre[class*="language-"] {
 .container {
     max-width: 850px;
     padding: 0 15px;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -342,6 +343,10 @@ pre[class*="language-"] {
     
     .nav .nav-container .extra a:hover {
         background: #f2f2f2;
+    }
+
+    .container {
+        margin-top: 0;
     }
 
     body {
