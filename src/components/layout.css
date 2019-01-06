@@ -18,7 +18,7 @@ body {
 }
 
 a { 
-    color: inherit;
+    color: #3f80ff;
     text-decoration: none;
 }
 
@@ -38,6 +38,9 @@ dl, ol, p, table, ul {
     margin: 0 0 2rem;
 }
 
+ul ul, ol ul {
+    list-style-type: disc;
+}
 
 
 img {
