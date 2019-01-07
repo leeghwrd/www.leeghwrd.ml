@@ -333,6 +333,25 @@ pre[class*="language-"] {
 .article p {
     margin: 0 0 2.5rem;
 }
+.latest-post {}
+
+.latest-post h1 {}
+
+.latest-post h2 {
+    margin: 0;
+}
+
+.latest-post a {
+    color: inherit;
+}
+.latest-post img {}
+
+.latest-post p time {
+    color: #888;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
 
 @media (min-width: 700px) {
 

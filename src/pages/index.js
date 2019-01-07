@@ -8,19 +8,27 @@ export default function HomeIndex({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Layout>
-     
-      <section className="list">
+     <section className="latest-post">
+     <header className="latest-post-header">
+      <h1>Latest Post</h1>
+     </header>
+
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
-              <Link to={post.frontmatter.path} key={post.id} className="post">
-        <div className="post-thumbnail">
-          <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
-        </div>
-          <div className="post-title">{post.frontmatter.title}</div>
-  <span className="post-date"><time>{post.frontmatter.date}</time></span>
+              <Link to={post.frontmatter.path} key={post.id}>
+          <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post" width="50px" height="50px"></img>
+          <h2>{post.frontmatter.title}</h2>
+  <p><time>{post.frontmatter.date}</time></p>
+  <p>{post.excerpt}</p>
+
               </Link>
         ))}
+      </section>
+
+      <h1>News</h1>
+      <section className="section">
+        
       </section>
     </Layout>
   )

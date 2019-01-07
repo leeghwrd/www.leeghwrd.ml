@@ -15,7 +15,7 @@ export default function Template({ data }) {
 
       <div className="container">
       <header className="single-header">
-        <img alt="Post Graphics" width="50" height="50" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
+        <img alt="Post Graphics" width="64" height="64" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
         <h1>{post.frontmatter.title}</h1>
         <time className="post-page-date">{post.frontmatter.date}</time>
       </header>
