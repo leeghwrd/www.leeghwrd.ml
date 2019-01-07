@@ -28,7 +28,7 @@ export default function HomeIndex({ data }) {
 
       <h1>News</h1>
       <section className="section">
-        
+        <p>Reviewing a suitable plugin for, auto updated curated list of tech news. Something good for the geek like minds out there so I can wait on choosing the content.</p>
       </section>
     </Layout>
   )
