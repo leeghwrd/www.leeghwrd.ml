@@ -32,7 +32,9 @@ HomeIndex.propTypes = {
 
 export const pageQuery = graphql`
   query HomeIndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1
+    ) {
       totalCount
       edges {
         node {
