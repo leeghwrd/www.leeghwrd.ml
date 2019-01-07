@@ -1,10 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+
 import Layout from "../components/layout"
+
 import SearchQuery from "../components/searchQuery";
 
-export default function Index({ data }) {
+export default function ArticleIndex({ data }) {
   
   const { edges: posts } = data.allMarkdownRemark
   return (
@@ -29,12 +31,12 @@ export default function Index({ data }) {
   )
 }
 
-Index.propTypes = {
+ArticleIndex.propTypes = {
   data: PropTypes.object,
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query ArticleIndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       totalCount
       edges {
