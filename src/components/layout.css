@@ -177,7 +177,7 @@ pre[class*="language-"] {
 
 #main-content {
     /* margin-top: 60px; */
-    padding: 120px 0 0;     /* add amount from disabled margin-top.*/
+    padding: 2rem 0 0 0;     /* add amount from disabled margin-top.*/
     min-height: calc(100vh - 210px);
 }
 
@@ -402,7 +402,7 @@ pre[class*="language-"] {
 
     #main-content {
         /* margin-top: 70px; */
-        padding: 170px 0 0;     /* add amount from disabled margin-top.*/
+        padding: 4rem 0 0 0;     /* add amount from disabled margin-top.*/
     }
 
     #main-content h1 {
@@ -505,7 +505,7 @@ pre[class*="language-"] {
 
     #main-content {
         /* margin-top: 70px; */
-        padding: 8rem 0 0 0;     /* add amount from disabled margin-top.*/
+        padding: 4rem 0 0 0;     /* add amount from disabled margin-top.*/
     }
 
 }
