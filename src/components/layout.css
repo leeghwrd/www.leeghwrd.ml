@@ -113,9 +113,9 @@ pre[class*="language-"] {
 }
 
 .nav {
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
     background: #fff;
     z-index: 1;
     width: 100%;
@@ -467,7 +467,7 @@ pre[class*="language-"] {
     }
 
     .nav .nav-container {
-    height: 70px;
+        height: 70px;
     }
 
     .nav .nav-container .brand {

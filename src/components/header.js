@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from "gatsby"
 import brandImg from '../images/brand.png'
+import Headroom from 'react-headroom'
 
 const Header = ({ siteTitle }) => (
+
+<Headroom style={{
+    position: "fixed"   // overrides default 'relative postion' - caused jumping nav.
+}}>
   <nav className="nav">
+  
         <div className="nav-container">
             <div className="brand">
                 <Link to="/"><img src={brandImg} className="brand-icon" alt="brand"/><span>{siteTitle}</span></Link>
@@ -26,6 +32,8 @@ const Header = ({ siteTitle }) => (
             </div>
         </div>
     </nav>
+</Headroom>
+
 )
 
 export default Header
