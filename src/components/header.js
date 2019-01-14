@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
             <a href="https://github.com/lghoward" className="nav-icon" target="_blank" rel="noopener noreferrer">
                 <i className="icon-github"></i>
             </a>
-            <a href="https://github.com/lghoward" className="nav-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/lghwrd" className="nav-icon" target="_blank" rel="noopener noreferrer">
                 <i className="icon-twitter"></i>
             </a>
             <a href="https://github.com/lghoward" className="nav-icon" target="_blank" rel="noopener noreferrer">
