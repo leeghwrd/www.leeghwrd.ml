@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
-import SearchQuery from "../components/searchQuery";
+// import SearchQuery from "../components/searchQuery";
 
 export default function ArticleIndex({ data }) {
   
@@ -12,8 +12,8 @@ export default function ArticleIndex({ data }) {
   return (
     <Layout>
 
-      <SearchQuery />
-     
+      {/* <SearchQuery /> */}
+     <h1>Articles</h1>
       <section className="list">
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
