@@ -1,10 +1,10 @@
 ---
 title: "Continuing My C++ Journey."
-path: /articles/learning-cpp
+path: /articles/continuing-my-cpp-journey
 thumbnail: "./cpp-logo.png"
-tags: ["oop", ,"development", "cpp"]
-date: 2019-01-06
-yearSlug: "2019"
+tags: ["oop", "development", "cpp"]
+date: 2018-11-21
+yearSlug: "2018"
 description: >
   Overview of my history and journey of learning C++. 
 ---

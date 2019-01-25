@@ -1,10 +1,10 @@
 ---
-title: "Gatsby JS"
-path: /articles/third-article
+title: "Personal Site Using GatsbyJS"
+path: /articles/personal-site-using-gatsbyjs
 thumbnail: "./gatsbyjs.png"
 tags: ["node", "react"]
-date: '2014-03-21T22:12:03.284Z'
-yearSlug: "2014"
+date: 2018-10-21
+yearSlug: "2018"
 description: >
   React ist eine JavaScript-Softwarebibliothek, 
   die ein Grundgerüst für die Ausgabe von User-Interface-Komponenten
