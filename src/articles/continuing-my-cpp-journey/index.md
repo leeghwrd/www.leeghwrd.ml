@@ -1,5 +1,5 @@
 ---
-title: "Continuing My C++ Journey."
+title: "Continuing My C++ Journey"
 path: /articles/continuing-my-cpp-journey
 thumbnail: "./cpp-logo.png"
 tags: ["oop", "development", "cpp"]
