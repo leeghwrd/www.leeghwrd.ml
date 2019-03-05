@@ -9,7 +9,7 @@ export default function HomeIndex({ data }) {
   return (
     <Layout>
       <section className="section">
-      <h2>Latest Post</h2>
+      <h2>Latest Posts</h2>
 
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
@@ -45,7 +45,7 @@ HomeIndex.propTypes = {
 export const pageQuery = graphql`
   query HomeIndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1
+      limit: 3
     ) {
       totalCount
       edges {
