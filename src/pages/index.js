@@ -8,28 +8,32 @@ export default function HomeIndex({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Layout>
-     <section className="latest-post">
-     <header className="latest-post-header">
-      <h1>Latest Post</h1>
-     </header>
+      <section className="section">
+      <h2>Latest Post</h2>
 
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
-              <Link to={post.frontmatter.path} key={post.id}>
-          <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post" width="50px" height="50px"></img>
-          <h2>{post.frontmatter.title}</h2>
-  <p><time>{post.frontmatter.date}</time></p>
-  <p>{post.excerpt}</p>
-
+              <Link to={post.frontmatter.path} key={post.id} className="post">
+        <div className="post-thumbnail">
+          <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
+        </div>
+          <div className="post-title">{post.frontmatter.title}</div>
+  <span className="post-date"><time>{post.frontmatter.date}</time></span>
               </Link>
         ))}
       </section>
 
-      <h1>News</h1>
-      <section className="section">
-        <p>Reviewing a suitable plugin for, auto updated curated list of tech news. Something good for the geek like minds out there so I can wait on choosing the content.</p>
-      </section>
+      <section id="projects" className="section">
+			<h2>Projects</h2>
+			<a className="post" href="https://github.com/leeghwrd/CocktailsDB">
+				<div className="post-thumbnail">
+				    <i className="icon-beer"></i>
+				</div>
+				<div className="post-title">CocktailsDB</div>
+				<div className="post-description">iOS/Swift4 app - generates a random drink with the press of a button.</div>
+			</a>
+		</section>
     </Layout>
   )
 }
