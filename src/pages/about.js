@@ -6,7 +6,7 @@ const AboutMe = () => (
   <Layout>
     <section className="section">
                 <h1>Hi, I'm Lee.</h1>
-                <p className="lead">I'm an <strong>IT Professional</strong> / <strong>Developer</strong>. From <strong>Silicon Valley</strong>. I love <strong>Open Source</strong> in general. Currently I find myself delving into, <strong>iOS</strong> and <strong>Full Stack Web</strong> Development.</p>
+                <p className="lead">Junior iOS<strong> Developer</strong> and <strong>former</strong> datacenter tech from <strong>Silicon Valley</strong>. I'm currently doing freelance iOS development. I also enjoy following <strong>Open Source</strong> ranging from<strong> Fullstack Web Development</strong> using the latest<strong> Javascript </strong> technologies, to projects created with <strong>C++</strong>.</p>
             </section>
             <blockquote>
                 We have to do the best we are capable of. This is our sacred human responsibility. <cite>— Albert Einstein</cite>

@@ -9,8 +9,9 @@ export default function HomeIndex({ data }) {
   return (
     <Layout>
       <section className="section">
-      <h2>Latest Posts</h2>
-
+      <h2>Latest posts
+      <Link className="view-all" to="/articles/">view all</Link>
+      </h2>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
@@ -25,7 +26,9 @@ export default function HomeIndex({ data }) {
       </section>
 
       <section id="projects" className="section">
-			<h2>Projects</h2>
+			<h2>Projects
+      <a className="view-all" href="https://github.com/leeghwrd?tab=repositories">view all</a>
+      </h2>
 			<a className="post" href="https://github.com/leeghwrd/CocktailsDB">
 				<div className="post-thumbnail">
 				    <i className="icon-beer"></i>
