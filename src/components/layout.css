@@ -95,8 +95,8 @@ NEED TO CREATE PALLETE MAYBE?
 
 .nav .nav-container .brand .brand-icon {
     display: block;
-    max-width: 20px;
-    height: 20px;
+    max-width: 25px;
+    height: 25px;
 }
 
 .nav .nav-container .brand span {
@@ -110,7 +110,8 @@ NEED TO CREATE PALLETE MAYBE?
     align-items: center;
     color: #222;
     padding: 0;
-    font-size: .95rem;
+    margin-top: .31rem;
+    font-size: 1.14rem;
 }
 
 .nav {
@@ -154,14 +155,14 @@ NEED TO CREATE PALLETE MAYBE?
 }
 
 .nav .nav-container .extra {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     display: -ms-flexbox;
     display: flex;
 }
 
 .nav a.nav-icon {
     cursor: pointer!important;
-    padding: .25rem .5rem;
+    padding: .1rem .5rem;
 }
 
 .nav a { 
@@ -401,7 +402,6 @@ NEED TO CREATE PALLETE MAYBE?
     }
 
     .nav .nav-container .brand a {
-        margin-top: .5rem;
         font-size: 1.1rem;
     }
 
