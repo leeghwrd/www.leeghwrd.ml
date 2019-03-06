@@ -27,7 +27,9 @@ const Header = ({ siteTitle }) => (
                 <i className="icon-twitter"></i>
             </a>
             <a href="https://www.linkedin.com/in/leeghwrd" className="nav-icon" target="_blank" rel="noopener noreferrer">
-                <span className="blue"><i className="icon-linkedin-sign"></i></span>
+                <i className="icon-linkedin-sign" style={{
+                    color: `#0077b5`
+                }}></i>
             </a>
             </div>
         </div>
