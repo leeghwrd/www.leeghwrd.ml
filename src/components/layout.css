@@ -521,7 +521,7 @@ NEED TO CREATE PALLETE MAYBE?
     }
     
     .nav a {
-        padding: .8rem 1.1rem;
+        padding: .7rem 1.1rem;
     }
 
     /* .nav .nav-container .extra {
@@ -529,7 +529,7 @@ NEED TO CREATE PALLETE MAYBE?
     } */
 
     .nav a.nav-icon {
-        padding: .8rem;
+        padding: .4rem .8rem;
     }
 
     #main-content {
