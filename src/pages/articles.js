@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 
@@ -6,9 +6,13 @@ import Layout from "../components/layout"
 
 // import SearchQuery from "../components/searchQuery";
 
-export default function ArticleIndex({ data }) {
-  
-  const { edges: posts } = data.allMarkdownRemark
+export default class ArticleIndex extends Component {
+ 
+  render() {
+    const { data } = this.props
+
+    const { edges: posts } = data.allMarkdownRemark
+
   return (
     <Layout>
 
@@ -23,12 +27,13 @@ export default function ArticleIndex({ data }) {
           <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
         </div>
           <div className="post-title">{post.frontmatter.title}</div>
-  <span className="post-date"><time>{post.frontmatter.date}</time></span>
+        <span className="post-date"><time>{post.frontmatter.date}</time></span>
               </Link>
         ))}
       </section>
     </Layout>
   )
+        }
 }
 
 ArticleIndex.propTypes = {
