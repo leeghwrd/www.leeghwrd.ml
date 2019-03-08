@@ -31,21 +31,36 @@ export default class ArticleIndex extends React.Component {
   return (
 
     <Layout>
+      <section className="section">
+      <header className="search-enabled">
+          <h1>Articles</h1>
 
-     <h1>Articles</h1>
-      <section className="list">
-      <input type="text"
-      placeholder="Search Articles"
-      value={this.state.search}
-      onChange={this.updateSearch.bind(this)}
-      />
-      {filteredPosts.map((post) => {
-           return <Link to={post.node.frontmatter.path} key={post.node.id}><Article post={post} key={post.node.id}/> </Link>
+        <form
+          id="search-form"
+          role="search"
+          className="search-form"
+          >
+            <div className="search-wrapper">
+            <input type="text"
+            placeholder="Search Articles"
+            value={this.state.search}
+            onChange={this.updateSearch.bind(this)}
+            />
+        </div>
+          </form>
+        </header>
+        </section>
+        <section className="list">
+        {filteredPosts.map((post) => {
+           return <Link className="post" to={post.node.frontmatter.path}
+                        key={post.node.id}
+                        >
+                        <Article post={post} key={post.node.id}/> </Link>
   
         })
       }
-      </section>
-      
+        </section>
+
     </Layout>
   )
         }
