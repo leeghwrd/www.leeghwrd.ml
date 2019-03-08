@@ -42,10 +42,11 @@ export default class ArticleIndex extends React.Component {
           >
             <div className="search-wrapper">
             <input type="text"
-            placeholder="Search Articles"
+            placeholder="Search"
             value={this.state.search}
             onChange={this.updateSearch.bind(this)}
             />
+            <i className="search-icon icon-search"></i>
         </div>
           </form>
         </header>
