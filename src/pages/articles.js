@@ -1,32 +1,26 @@
-import React, { Component } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Article from "../components/article";
 
-export default class ArticleIndex extends Component {
+export default class ArticleIndex extends React.Component {
  
   render() {
     const { data } = this.props
 
     const { edges: posts } = data.allMarkdownRemark
-
+    
   return (
     <Layout>
 
      <h1>Articles</h1>
       <section className="list">
-      
-      {posts.map((post) => (
-              <Link to={post.node.frontmatter.path} key={post.id} className="post">
-        <div className="post-thumbnail">
-          <img src={post.node.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
-        </div>
-          <div className="post-title">{post.node.frontmatter.title}</div>
-        <span className="post-date"><time>{post.node.frontmatter.date}</time></span>
-              </Link>
-        ))}
-
+      {posts.map((post) => {
+           return <Article post={post} key={post.node.id}/>   
+        })
+      }
       </section>
     </Layout>
   )
