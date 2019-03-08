@@ -4,7 +4,6 @@
   "version": "0.8.0",
   "author": "lee howard <lee@lghoward.com>",
   "dependencies": {
-    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.1.1",
     "gatsby": "^2.0.85",
     "gatsby-cli": "^2.4.8",
     "gatsby-image": "^2.0.25",
@@ -15,7 +14,7 @@
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.10",
     "prismjs": "^1.15.0",

@@ -1,34 +1,70 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
+import { Link , graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Article from "../components/article";
 
-// import SearchQuery from "../components/searchQuery";
+export default class ArticleIndex extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      search: ''
+    }
+  }
 
-export default function ArticleIndex({ data }) {
-  
-  const { edges: posts } = data.allMarkdownRemark
+  updateSearch(event) {
+    this.setState({search: event.target.value.substr(0,20)});
+  }
+
+  render() {
+    const { data } = this.props
+
+    const { edges: posts } = data.allMarkdownRemark
+    
+    let filteredPosts = posts.filter(
+      (post)=> {
+        return post.node.frontmatter.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+      } 
+    );
+
   return (
-    <Layout>
 
-      {/* <SearchQuery /> */}
-     <h1>Articles</h1>
-      <section className="list">
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => (
-              <Link to={post.frontmatter.path} key={post.id} className="post">
-        <div className="post-thumbnail">
-          <img src={post.frontmatter.thumbnail.childImageSharp.fluid.src} alt="post"></img>
+    <Layout>
+      <section className="section">
+      <header className="search-enabled">
+          <h1>Articles</h1>
+
+        <form
+          id="search-form"
+          role="search"
+          className="search-form"
+          >
+            <div className="search-wrapper">
+            <input type="text"
+            placeholder="Search"
+            value={this.state.search}
+            onChange={this.updateSearch.bind(this)}
+            />
+            <i className="search-icon icon-search"></i>
         </div>
-          <div className="post-title">{post.frontmatter.title}</div>
-  <span className="post-date"><time>{post.frontmatter.date}</time></span>
-              </Link>
-        ))}
-      </section>
+          </form>
+        </header>
+        </section>
+        <section className="list">
+        {filteredPosts.map((post) => {
+           return <Link className="post" to={post.node.frontmatter.path}
+                        key={post.node.id}
+                        >
+                        <Article post={post} key={post.node.id}/> </Link>
+  
+        })
+      }
+        </section>
+
     </Layout>
   )
+        }
 }
 
 ArticleIndex.propTypes = {
