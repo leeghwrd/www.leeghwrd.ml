@@ -9,7 +9,7 @@ export default function HomeIndex({ data }) {
   return (
     <Layout>
       <section className="section">
-      <h2>Latest posts
+      <h2>Latest Articles
       <Link className="view-all" to="/articles/">view all</Link>
       </h2>
       {posts
