@@ -79,8 +79,21 @@ blockquote cite {
 
 pre[class*="language-"] {
     font-size: 1rem;
-    margin: 3rem 0;
-    border-radius: 4px;
+    border-radius: 0 0 6px 6px;
+    margin: 0;
+
+}
+
+.filename {
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    background: #444;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    color: #eee;
+    font-weight: 700;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -4px;
 }
 
 /* 
@@ -312,9 +325,10 @@ NEED TO CREATE PALLETE MAYBE?
     display: block;
 }
 
-.post-title, a.post-title {
-    /* display: block; */
-}
+/* .post-title, a.post-title {
+    display: block;
+} */
+
 .post-title {
     -ms-flex: 2;
     flex: 2;
