@@ -108,7 +108,7 @@ NEED TO CREATE PALLETE MAYBE?
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    color: #222;
+    color: #555;
     padding: 0;
     margin-top: .31rem;
     font-size: 1.14rem;
@@ -356,6 +356,10 @@ NEED TO CREATE PALLETE MAYBE?
     font-weight: bold;
     font-size: .9rem;
 }
+
+.article {
+    margin-bottom: 5rem;
+}
 .article h2 {
     margin: 0 0 .5rem 0;
 }
@@ -366,6 +370,50 @@ NEED TO CREATE PALLETE MAYBE?
     margin: 0 0 2.5rem;
 }
 
+/* Previous / Next button and title. */
+.pn-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.prev { display: flex; }
+
+.next { display: flex; }
+
+.pn-button {
+        border: none;
+        display: flex;
+        color: #4482C2;
+        padding: 0 .6rem;
+        height: 100%;
+        font-size: 3rem;
+        cursor: pointer;
+        align-items: center;
+}
+
+/* .pn-button-left {}
+
+.pn-button-right {} */
+
+.pn-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: .6rem 0 0 0;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.pn-title-left {
+    padding: 0 .6rem 0 0;
+}
+
+.pn-title-right {
+    padding: 0 0 0 .6rem;
+}
 
 @media (min-width: 700px) {
 
@@ -477,6 +525,14 @@ NEED TO CREATE PALLETE MAYBE?
     }
     .article h3 {
         margin: 0 0 .8rem 0;
+    }
+
+    .pn-container {
+        justify-content: space-around;
+    }
+
+    .pn-title {
+        font-size: 1rem;
     }
 
     #resources h1 {
