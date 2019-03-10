@@ -313,13 +313,16 @@ NEED TO CREATE PALLETE MAYBE?
 }
 
 .post-title, a.post-title {
-    display: block;
+    /* display: block; */
 }
 .post-title {
     -ms-flex: 2;
     flex: 2;
     font-weight: 500;
     color: #333;
+    min-height: 30px;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .post-description {
