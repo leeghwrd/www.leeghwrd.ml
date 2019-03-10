@@ -385,6 +385,7 @@ NEED TO CREATE PALLETE MAYBE?
 .pn-button {
         border: none;
         display: flex;
+        background-color: white;
         color: #4482C2;
         padding: 0 .6rem;
         height: 100%;
@@ -404,6 +405,7 @@ NEED TO CREATE PALLETE MAYBE?
     margin: .6rem 0 0 0;
     font-size: .9rem;
     font-weight: 600;
+    background-color: white;
     color: #555;
 }
 
