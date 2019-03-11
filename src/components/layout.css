@@ -83,6 +83,60 @@ pre[class*="language-"] {
     margin: 0;
 
 }
+pre {
+    border: 0;
+    border-radius: 4px;
+    background: 0 0;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    /* color: #404040; */
+    font-size: 14px;
+    margin: 0
+}
+
+pre,pre code {
+    font-family: Menlo,monospace
+}
+
+pre code {
+    line-height: 1.2
+}
+
+/* kbd {
+    border: 1px solid #ccc;
+    font-size: 13px
+} */
+
+:not(pre)>code {
+    /* color: #404040; */
+    background: 0 0;
+    font-family: Menlo,monospace;
+    font-size: 14px;
+    padding: 0 .2rem;
+    border: 1px solid #eee
+}
+
+code[class*=language-],pre[class*=language-],pre code {
+    font-size: 13px;
+    /* color: #b3b9c5; */
+    font-family: Menlo,Roboto Mono,Courier New,monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.7;
+    font-weight: 400;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    border-radius: 4px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
 
 .filename {
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -369,6 +423,10 @@ NEED TO CREATE PALLETE MAYBE?
     margin: .5rem 0;
 
 }
+
+.single-header img {
+    min-height: 64px;
+}
 .post-page-date {
     color: #888;
     font-weight: bold;
@@ -434,6 +492,53 @@ NEED TO CREATE PALLETE MAYBE?
 }
 
 @media (min-width: 700px) {
+
+    code[class*=language-],pre[class*=language-],pre code {
+        font-size:14px
+    }
+
+    pre code {
+        display: block;
+        padding: 1.5rem;
+        overflow: auto;
+        /* background-color: #333; */
+        /* box-shadow: 2px 4px 25px rgba(0,0,0,.15) */
+    }
+    
+    /* kbd {
+        background-color: #f7f7f7;
+        border: 1px solid rgba(0,0,0,.3);
+        border-radius: 3px;
+        box-shadow: 0 1px 0 rgba(0,0,0,.2),inset 0 0 0 2px #fff;
+        color: #333;
+        display: inline-block;
+        font-family: Helvetica,Arial,sans-serif;
+        line-height: 1.4;
+        margin: 0 .1em;
+        padding: .1em .6em;
+        text-shadow: 0 1px 0 #fff;
+        font-size: 14px
+    } */
+    
+    :not(pre)>code[class*=language-] {
+        padding: 3px 5px;
+        /* background: #333; */
+        border: 1px solid #333
+    }
+    
+    :not(pre)>code {
+        padding: 3px 5px;
+        border: none;
+        font-family: Menlo,Roboto Mono,Courier New,monospace;
+        font-weight: 400;
+        /* color: #111; */
+        border-radius: 4px;
+        background: rgba(0,0,0,.06)
+    }
+    
+    /* code[class*=language-css],code[class*=language-less],code[class*=language-sass],code[class*=language-scss] {
+        color: #c9c
+    } */
 
     h2 {
         font-weight: 700;
