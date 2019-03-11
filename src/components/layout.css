@@ -77,12 +77,8 @@ blockquote cite {
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-pre[class*="language-"] {
-    font-size: 1rem;
-    border-radius: 0 0 6px 6px;
-    margin: 0;
+/* ###############  BEGIN SYNTAX HIGHTLIGHTING #################### */
 
-}
 pre {
     border: 0;
     border-radius: 4px;
@@ -90,7 +86,7 @@ pre {
     -moz-tab-size: 2;
     -o-tab-size: 2;
     tab-size: 2;
-    /* color: #404040; */
+    color: #404040;
     font-size: 14px;
     margin: 0
 }
@@ -103,13 +99,13 @@ pre code {
     line-height: 1.2
 }
 
-/* kbd {
+kbd {
     border: 1px solid #ccc;
     font-size: 13px
-} */
+}
 
 :not(pre)>code {
-    /* color: #404040; */
+    color: #404040;
     background: 0 0;
     font-family: Menlo,monospace;
     font-size: 14px;
@@ -119,7 +115,7 @@ pre code {
 
 code[class*=language-],pre[class*=language-],pre code {
     font-size: 13px;
-    /* color: #b3b9c5; */
+    color: #b3b9c5;
     font-family: Menlo,Roboto Mono,Courier New,monospace;
     direction: ltr;
     text-align: left;
@@ -138,17 +134,222 @@ code[class*=language-],pre[class*=language-],pre code {
     -webkit-font-smoothing: subpixel-antialiased
 }
 
+pre code {
+    display: block;
+    padding: 1.5rem;
+    overflow: auto;
+    background-color: #333;
+    box-shadow: 2px 4px 25px rgba(0,0,0,.15)
+}
+
+kbd {
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.2),inset 0 0 0 2px #fff;
+    color: #333;
+    display: inline-block;
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 1.4;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px
+}
+
+:not(pre)>code[class*=language-] {
+    padding: 3px 5px;
+    background: #333;
+    border: 1px solid #333
+}
+
+:not(pre)>code {
+    padding: 3px 5px;
+    border: none;
+    font-family: Menlo,Roboto Mono,Courier New,monospace;
+    font-weight: 400;
+    color: #111;
+    border-radius: 4px;
+    background: rgba(0,0,0,.06)
+}
+
+code[class*=language-css],code[class*=language-less],code[class*=language-sass],code[class*=language-scss] {
+    color: #c9c
+}
+
+
 .filename {
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
     background: #444;
     padding: .4rem 1rem;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #eee;
     font-weight: 700;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     margin-bottom: -4px;
 }
+
+.token.doctype {
+    background: #000;
+    color: #fff
+}
+
+.token.cdata,.token.comment,.token.prolog {
+    color: #777c85
+}
+
+.token.namespace {
+    opacity: .7
+}
+
+.token.attr-value,.token.string {
+    color: #92d192
+}
+
+.token.punctuation {
+    color: #d5d8df
+}
+
+.token.operator {
+    color: #ac8d58
+}
+
+.token.variable {
+    color: #f2777a
+}
+
+.token.property {
+    color: #abb2bf
+}
+
+.token.boolean,.token.constant,.token.entity,.token.inserted,.token.number,.token.regex,.token.symbol,.token.url {
+    color: #fca369
+}
+
+.token.delimiter {
+    background: #000;
+    color: #fff;
+    padding: 1px 2px
+}
+
+.token.atrule {
+    color: #62cfcf
+}
+
+.token.keyword {
+    color: #ffeead
+}
+
+.language-autohotkey .token.selector {
+    color: #f7931e
+}
+
+.token.attr-name {
+    color: #ffd479
+}
+
+.token.function {
+    color: #62cfcf
+}
+
+.language-php .token.function {
+    color: #fff
+}
+
+.token.class-name {
+    color: #e1a6f2
+}
+
+.language-autohotkey .token.tag,.token.deleted {
+    color: #f5b80e
+}
+
+.token.tag {
+    color: #6ab0f3
+}
+
+.language-autohotkey .token.keyword {
+    color: #ffeead
+}
+
+.token.selector {
+    color: #ffd479
+}
+
+.token.italic {
+    font-style: italic
+}
+
+pre[data-line] {
+    position: relative;
+    padding: 1rem 0
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: inherit 0;
+    margin-top: 1rem;
+    background: hsla(0,0%,59%,.1);
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre
+}
+
+.line-highlight:before,.line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    top: .4em;
+    left: .6em;
+    min-width: 1em;
+    padding: 0 .5em;
+    background-color: transparent;
+    color: transparent;
+    font: 700 65%/1.5 sans-serif;
+    text-align: center;
+    vertical-align: .3em;
+    border-radius: 999px;
+    text-shadow: none
+}
+
+.line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em
+}
+
+.line-numbers .line-highlight:after,.line-numbers .line-highlight:before {
+    content: none
+}
+
+code::-moz-selection,pre::-moz-selection {
+    text-shadow: none;
+    color: inherit;
+    background: hsla(0,0%,59%,.3)!important
+}
+
+code::selection,pre::selection {
+    text-shadow: none;
+    color: inherit;
+    background: hsla(0,0%,59%,.3)!important
+}
+
+code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection {
+    text-shadow: none;
+    color: inherit;
+    background: hsla(0,0%,59%,.3)!important
+}
+
+code[class*=language-] ::selection,pre[class*=language-]::selection {
+    text-shadow: none;
+    color: inherit;
+    background: hsla(0,0%,59%,.3)!important
+}
+
+
+/* ###############  END SYNTAX HIGHTLIGHTING #################### */
 
 /* 
 NEED TO CREATE PALLETE MAYBE?
