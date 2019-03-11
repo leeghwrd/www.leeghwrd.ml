@@ -325,18 +325,19 @@ NEED TO CREATE PALLETE MAYBE?
     display: block;
 }
 
-/* .post-title, a.post-title {
-    display: block;
-} */
+.post-title, a.post-title {
+    display: flex;
+}
 
 .post-title {
     -ms-flex: 2;
     flex: 2;
-    font-weight: 500;
     color: #333;
     min-height: 30px;
     font-size: 1.1rem;
     line-height: 1.4;
+    padding-top: .16rem;
+
 }
 
 .post-description {
@@ -389,49 +390,47 @@ NEED TO CREATE PALLETE MAYBE?
 
 /* Previous / Next button and title. */
 .pn-container {
-    display: flex;
-    flex-wrap: nowrap;
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 2rem 0;
+    margin: 0;
 }
 
-.prev { display: flex; }
-
-.next { display: flex; }
-
-.pn-button {
-        border: none;
-        display: flex;
-        background-color: white;
-        color: #4482C2;
-        padding: 0 .6rem;
-        height: 100%;
-        font-size: 3rem;
-        cursor: pointer;
-        align-items: center;
+.prev {
+    display: flex;
+    padding-bottom: .2rem;
+}
+.next {
+    justify-content: flex-end;
+    display: flex;
+    padding-top: .2rem;
 }
 
-/* .pn-button-left {}
+.pn-header {
+    display: flex;
+    margin: 0;
+    font-size: .9rem;
+    font-weight: lighter;
 
-.pn-button-right {} */
+}
+
+.pn-header-right {
+    justify-content: flex-end;
+}
 
 .pn-title {
     display: flex;
     align-items: center;
-    text-align: center;
-    margin: .6rem 0 0 0;
-    font-size: .9rem;
+    margin: 0;
+    font-size: 1.1rem;
     font-weight: 600;
     background-color: white;
-    color: #555;
-}
-
-.pn-title-left {
-    padding: 0 .6rem 0 0;
+    color: #285680;
 }
 
 .pn-title-right {
-    padding: 0 0 0 .6rem;
+    justify-content: flex-end;
 }
 
 @media (min-width: 700px) {
@@ -547,7 +546,15 @@ NEED TO CREATE PALLETE MAYBE?
     }
 
     .pn-container {
-        justify-content: space-around;
+        display: flex;
+    }
+
+    .prev {
+        padding-bottom: 0;
+    }
+
+    .next {
+        padding-top: 0;
     }
 
     .pn-title {

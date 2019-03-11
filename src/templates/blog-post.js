@@ -32,9 +32,10 @@ export default function Template({ data, pageContext }) {
       {prev === false ? null : (
         <div className="prev">
         {prev && <> <Link to={prev.frontmatter.path}>
-            <button type="button" className="pn-button pn-button-left">&laquo;</button>
-            </Link>
-             <p className="pn-title pn-title-left">{prev.frontmatter.title}</p>
+              <h4 className="pn-header">Previous</h4>
+             <p className="pn-title pn-title-left">
+             &#8592; {prev.frontmatter.title}</p>
+             </Link>
              </>
         }
         
@@ -42,10 +43,11 @@ export default function Template({ data, pageContext }) {
       )}
       {next === false ? null : (
           <div className="next">
-        {next && <> <p className="pn-title pn-title-right">{next.frontmatter.title}</p>
-
-<Link to={next.frontmatter.path}>
-              <button type="button" className="pn-button pn-button-right">&raquo;</button>
+        {next && <> 
+        <Link to={next.frontmatter.path}>
+        <h4 className="pn-header pn-header-right">Next</h4>
+        <p className="pn-title pn-title-right">
+        {next.frontmatter.title} &#8594;</p> 
             </Link>
             </>
           }
