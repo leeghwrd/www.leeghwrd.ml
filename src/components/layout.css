@@ -79,6 +79,9 @@ blockquote cite {
 
 /* ###############  BEGIN SYNTAX HIGHTLIGHTING #################### */
 
+.gatsby-highlight {
+    margin: 0 0 1.8rem 0;
+}
 pre {
     border: 0;
     border-radius: 4px;
