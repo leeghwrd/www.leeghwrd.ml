@@ -54,9 +54,3 @@ int main()
         std::cout << "The string " << needle << " not found\n";
 }
 ```
-
-## C++ Overload
-
-Overload demo.
-
-
