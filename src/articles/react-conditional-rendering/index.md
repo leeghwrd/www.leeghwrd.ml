@@ -16,7 +16,7 @@ Conditional rendering is very handy. Below is a snippet of code from my sites po
 
 <div class="filename">src/templates/blog-post.js</div>
 
-```javascript
+```jsx
 <div className="pn-container">
       {prev === false ? null : (
         <div className="prev">
