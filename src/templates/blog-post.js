@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/baseLayoutOverrideForBlogPost"
+import Layout from "../components/layoutOverrideForBlogPost"
 
 export default function Template({ data, pageContext }) {
 
