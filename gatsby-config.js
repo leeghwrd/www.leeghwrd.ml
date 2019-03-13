@@ -71,16 +71,16 @@ module.exports = {
         name: 'Lee Howard',
         short_name: 'lghoward',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        background_color: '#285680',
+        theme_color: '#285680',
+        display: 'fullscreen',
+        icon: 'src/images/icon.svg', // This path is relative to the root of the site.
       },
       
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
