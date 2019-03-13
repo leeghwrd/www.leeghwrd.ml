@@ -461,7 +461,6 @@ NEED TO CREATE PALLETE MAYBE?
 .container {
     max-width: 850px;
     padding: 0 15px;
-    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -757,9 +756,9 @@ NEED TO CREATE PALLETE MAYBE?
         background: #f2f2f2;
     }
 
-    .container {
+    /* .container {
         margin-top: 0;
-    }
+    } */
 
     body {
         font-size: 1.15rem;
@@ -794,7 +793,7 @@ NEED TO CREATE PALLETE MAYBE?
 
     #main-content {
         /* margin-top: 70px; */
-        padding: 4rem 0 0 0;     /* add amount from disabled margin-top.*/
+        padding: 80px 0 0 0;     /* add amount from disabled margin-top.*/
     }
 
     #main-content h1 {
@@ -925,7 +924,7 @@ NEED TO CREATE PALLETE MAYBE?
 
     #main-content {
         /* margin-top: 70px; */
-        padding: 4rem 0 0 0;     /* add amount from disabled margin-top.*/
+        padding: 80px 0 0 0;     /* add amount from disabled margin-top.*/
     }
 
 }
