@@ -490,7 +490,7 @@ NEED TO CREATE PALLETE MAYBE?
     -ms-flex-align: center;
     align-items: center;
     height: 100px;
-    color: #888;
+    color: #767676; /* old #888, failing contrast ratio. */
 }
 
 .footer strong {
@@ -600,7 +600,7 @@ NEED TO CREATE PALLETE MAYBE?
 
 .post-description {
     font-size: .9rem;
-    color: #888;
+    color: #767676; /* old #888, failing contrast ratio. */
     margin: 0 2rem 0 1rem;
     -ms-flex: 8;
     flex: 8;
@@ -608,7 +608,7 @@ NEED TO CREATE PALLETE MAYBE?
 }
 
 .post-date {
-    color: #888;
+    color: #767676; /* old #888, failing contrast ratio. */
     font-size: .9rem;
     display: none;
 }
