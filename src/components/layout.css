@@ -450,7 +450,7 @@ NEED TO CREATE PALLETE MAYBE?
 #main-content {
     /* margin-top: 60px; */
     padding: 2rem 0 0 0;     /* add amount from disabled margin-top.*/
-    min-height: calc(100vh - 210px);
+    /* min-height: calc(100vh - 210px); uneeded, wait until sure no side-affect. */
 }
 
 #main-content h1 {
