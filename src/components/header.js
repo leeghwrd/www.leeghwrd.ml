@@ -20,13 +20,13 @@ const Header = ({ siteTitle }) => (
                     <Link to="/resources/">Resources</Link>
             </div>
             <div className="extra">
-            <a href="https://github.com/leeghwrd" className="nav-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/leeghwrd" aria-label="github" className="nav-icon" target="_blank" rel="noopener noreferrer">
                 <i className="icon-github"></i>
             </a>
-            <a href="https://twitter.com/leeghwrd" className="nav-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/leeghwrd" aria-label="twitter" className="nav-icon" target="_blank" rel="noopener noreferrer">
                 <i className="icon-twitter"></i>
             </a>
-            <a href="https://www.linkedin.com/in/leeghwrd" className="nav-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/leeghwrd" aria-label="linkedin" className="nav-icon" target="_blank" rel="noopener noreferrer">
                 <i className="icon-linkedin-sign" style={{
                     color: `#0077b5`
                 }}></i>
