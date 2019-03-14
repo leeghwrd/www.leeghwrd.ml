@@ -3,8 +3,11 @@ import { Link } from "gatsby"
 import brandImg from '../images/brand.png'
 import Headroom from 'react-headroom'
 
-const Header = ({ siteTitle }) => (
+import ThemeContext from '../context/ThemeContext'
 
+const Header = ({ siteTitle }) => (
+<ThemeContext.Consumer>
+    {theme => (
 <Headroom style={{
     position: "fixed"   // overrides default 'relative postion' - caused jumping nav.
 }}>
@@ -20,6 +23,9 @@ const Header = ({ siteTitle }) => (
                     <Link to="/resources/">Resources</Link>
             </div>
             <div className="extra">
+            <button className="dark-switcher" onClick={ theme.toggleDark }>
+            {theme.dark ? <span> ☀ </span> : <span> ☾ </span>}
+          </button>
             <a href="https://github.com/leeghwrd" aria-label="github" className="nav-icon" target="_blank" rel="noopener noreferrer">
                 <i className="icon-github"></i>
             </a>
@@ -35,6 +41,8 @@ const Header = ({ siteTitle }) => (
         </div>
     </nav>
 </Headroom>
+ )}
+ </ThemeContext.Consumer>
 
 )
 
