@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
                     <Link to="/resources/">Resources</Link>
             </div>
             <div className="extra">
-            <button className="dark-switcher" onClick={theme.toggleDark}>
+            <button className="dark-switcher" onClick={ theme.toggleDark }>
             {theme.dark ? <span> ☀ </span> : <span> ☾ </span>}
           </button>
             <a href="https://github.com/leeghwrd" aria-label="github" className="nav-icon" target="_blank" rel="noopener noreferrer">

@@ -694,6 +694,81 @@ NEED TO CREATE PALLETE MAYBE?
     justify-content: flex-end;
 }
 
+/* removes blue border from button */
+button:focus { outline: none; }
+
+/* Dark mode styles */
+.dark-switcher {
+    color: #666;
+    font-size: 1.6rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dark {
+    background-color: #292929;
+    color: #fff;
+    /* transition: all 0.3s ease; */
+}
+  
+.light {
+    /* transition: all 0.3s ease; */
+    background-color: #fefefe;
+}
+  
+.dark a,
+.dark a:visited {
+    color: #fff;
+}
+
+.dark h1, .dark h2 {
+    color: #b3b9c5;
+}
+
+.dark .nav {
+    background-color: #202020;
+    border-bottom: 2px solid #202020;
+}
+
+.dark .nav-container .brand a {
+    color: #b3b9c5;
+}
+
+.dark .nav-container a {
+    color: #777c85;
+}
+.dark .post-title {
+    color: #e2c891!important;
+
+}
+
+.dark [type=text] {
+    background: #202020;
+    border: 1px solid #202020;
+    color: #b3b9c5;
+}
+
+.dark .view-all {
+    color: #fff!important;
+    background: #4a7baa;
+    border: 1px solid #4a7baa;
+}
+
+.dark .nav .nav-container .links a:hover, .dark .nav .nav-container .extra a:hover, .dark .post:hover {
+    color: #b3b9c5;
+    background: #202020;
+}
+
+.dark .post {
+    border-bottom: 2px solid #202020;
+}
+
+.dark .post:last-of-type {
+    border-bottom: none;
+}
+
+
 @media (min-width: 700px) {
 
     code[class*=language-],pre[class*=language-],pre code {
