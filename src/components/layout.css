@@ -791,10 +791,10 @@ NEED TO CREATE PALLETE MAYBE?
         padding: .5rem .6rem;
     }
 
-    #main-content {
-        /* margin-top: 70px; */
-        padding: 80px 0 0 0;     /* add amount from disabled margin-top.*/
-    }
+    /* #main-content {
+        margin-top: 70px;
+        padding: 80px 0 0 0;     add amount from disabled margin-top.
+    } */
 
     #main-content h1 {
         text-align: left;
