@@ -448,8 +448,11 @@ NEED TO CREATE PALLETE MAYBE?
 
 
 #main-content {
+    min-height: calc(100vh - 170px);
+    overflow: hidden;
     /* margin-top: 60px; */
-    padding: 2rem 0 0 0;     /* add amount from disabled margin-top.*/
+    padding: 2rem 0 0 0;     
+    /* add amount from disabled margin-top. */
     /* min-height: calc(100vh - 210px); uneeded, wait until sure no side-affect. */
 }
 
@@ -468,8 +471,13 @@ NEED TO CREATE PALLETE MAYBE?
 .section:first-of-type {
     margin-top: 0;
 }
+
+.section:last-of-type {
+    margin-bottom: 0;
+}
+
 .section {
-    margin: 50px 0;
+    margin-bottom: 3rem;
 }
 
 .section>h2 {
@@ -489,11 +497,11 @@ NEED TO CREATE PALLETE MAYBE?
     -ms-flex-align: center;
     align-items: center;
     height: 100px;
-    color: #767676; /* old #888, failing contrast ratio. */
+    color: #777c85;
 }
 
 .footer strong {
-    color: #111;
+    color: #4a7baa;
 }
 
 .search-enabled {
@@ -505,7 +513,7 @@ NEED TO CREATE PALLETE MAYBE?
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .search-enabled h1 {
@@ -534,7 +542,6 @@ NEED TO CREATE PALLETE MAYBE?
     padding: .75rem;
     outline: none;
     background: #f2f2f2;
-    margin-bottom: .5rem;
     font-size: 1rem;
     width: 100%;
     max-width: 100%;
@@ -550,6 +557,7 @@ NEED TO CREATE PALLETE MAYBE?
 .view-all {
     background: #f2f2f2;
     border-radius: 4px;
+    border: 1px solid #f2f2f2;
     padding: .6rem .8rem;
     font-size: .85rem;
     margin-left: .5rem;
@@ -708,7 +716,7 @@ button:focus { outline: none; }
   
 .dark {
     background-color: #292929;
-    color: #fff;
+    color: #777c85;
     /* transition: all 0.3s ease; */
 }
   
@@ -716,11 +724,7 @@ button:focus { outline: none; }
     /* transition: all 0.3s ease; */
     background-color: #fefefe;
 }
-  
-.dark a,
-.dark a:visited {
-    color: #fff;
-}
+
 
 .dark h1, .dark h2 {
     color: #b3b9c5;
@@ -768,6 +772,18 @@ button:focus { outline: none; }
     border-bottom: none;
 }
 
+.dark .lead {
+    color: #b3b9c5;
+}
+
+.dark blockquote {
+    border-color: #202020;
+    color: #777c85;
+}
+
+.dark .pn-title {
+    background-color: #292929;
+}
 
 @media (min-width: 700px) {
 
@@ -866,22 +882,15 @@ button:focus { outline: none; }
         padding: .5rem .6rem;
     }
 
-    /* #main-content {
-        margin-top: 70px;
-        padding: 80px 0 0 0;     add amount from disabled margin-top.
-    } */
+    #main-content {
+        /* margin-top: 70px; */
+        padding: 30px 0 0 0;  /* add amount from disabled margin-top. */
+    }
 
     #main-content h1 {
         text-align: left;
     }
 
-    .section {
-        margin: 80px 0;
-    }
-
-    .section:first-of-type {
-        margin-bottom: 0
-    }
 
     h1 {
         font-size: 2rem;
@@ -945,7 +954,7 @@ button:focus { outline: none; }
     }
 
     #resources h1 {
-        margin-bottom: 4rem;
+        margin-bottom: 2.3rem;
     }
 
     #resources h2 {
@@ -999,7 +1008,7 @@ button:focus { outline: none; }
 
     #main-content {
         /* margin-top: 70px; */
-        padding: 80px 0 0 0;     /* add amount from disabled margin-top.*/
+        padding: 50px 0 0 0; /* add amount from disabled margin-top. */
     }
 
 }
