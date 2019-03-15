@@ -7,6 +7,7 @@ import Header from './header'
 import Footer from './footer'
 
 import './layout.css'
+import ThemeContext from '../context/ThemeContext'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -20,7 +21,9 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <ThemeContext.Consumer>
+        {theme => (
+          <div className={theme.dark ? 'dark' : 'light'}>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -39,8 +42,9 @@ const Layout = ({ children }) => (
 
         <Footer />
 
-      </>
-    )}
+        </div>
+        )}
+        </ThemeContext.Consumer>    )}
   />
 )
 
