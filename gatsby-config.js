@@ -3,6 +3,7 @@ module.exports = {
     title: 'Lee Howard',
   },
   plugins: [
+    'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
 
