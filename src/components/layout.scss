@@ -97,9 +97,7 @@ pre {
   color: #404040;
   font-size: 14px;
   margin: 0;
-  font-family: Menlo, monospace;
   code {
-    font-family: Menlo, monospace;
     line-height: 1.2;
   }
 }
@@ -112,7 +110,6 @@ kbd {
 :not(pre) > code {
   color: #404040;
   background: 0 0;
-  font-family: Menlo,monospace;
   font-size: 14px;
   padding: 0 .2rem;
   border: 1px solid #eee;
@@ -143,7 +140,6 @@ pre {
   &[class*=language-] {
     font-size: 13px;
     color: #b3b9c5;
-    font-family: Menlo,Roboto Mono,Courier New,monospace;
     direction: ltr;
     text-align: left;
     white-space: pre;
@@ -163,7 +159,6 @@ pre {
   code {
     font-size: 13px;
     color: #b3b9c5;
-    font-family: Menlo,Roboto Mono,Courier New,monospace;
     direction: ltr;
     text-align: left;
     white-space: pre;
@@ -210,7 +205,6 @@ kbd {
   }
   padding: 3px 5px;
   border: none;
-  font-family: Menlo,Roboto Mono,Courier New,monospace;
   font-weight: 400;
   color: #111;
   border-radius: 4px;
@@ -820,7 +814,6 @@ button:focus {
     }
     padding: 3px 5px;
     border: none;
-    font-family: Menlo,Roboto Mono,Courier New,monospace;
     font-weight: 400;
     /* color: #111; */
     border-radius: 4px;
