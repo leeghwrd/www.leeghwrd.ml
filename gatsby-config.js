@@ -74,7 +74,7 @@ module.exports = {
         background_color: '#285680',
         theme_color: '#285680',
         display: 'fullscreen',
-        icon: 'src/images/icon.svg', // This path is relative to the root of the site.
+        icon: 'src/images/brand.svg', // This path is relative to the root of the site.
       },
       
     },

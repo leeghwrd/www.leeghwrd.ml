@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
-import brandImg from '../images/brand.png'
+import brandImg from '../images/brand.svg'
 import Headroom from 'react-headroom'
 
 import ThemeContext from '../context/ThemeContext'
