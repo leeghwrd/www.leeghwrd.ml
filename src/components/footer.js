@@ -9,7 +9,6 @@ const Footer = ({ siteTitle }) => (
             <strong style={{
                 fontSize: `.9rem`,
                 fontWeight: `500`,
-                color: `#333`
             }}> Lee Howard
             </strong>
             </small>
