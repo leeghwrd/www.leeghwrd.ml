@@ -388,11 +388,7 @@ code::-moz-selection, pre::-moz-selection, code::selection, pre::selection, code
 
 /* ###############  END SYNTAX HIGHTLIGHTING #################### */
 
-/* 
-NEED TO CREATE PALLETE MAYBE?
-.blue {
-    color: #0077b5;  // LinkedIn Blue 
-}*/
+ // color: #0077b5; LinkedIn Blue 
 
 .nav {
   .nav-container {
@@ -445,9 +441,7 @@ NEED TO CREATE PALLETE MAYBE?
       display: flex;
     }
   }
-  /* position: fixed;
-  top: 0;
-  left: 0; */
+
   background: #fff;
   z-index: 1;
   width: 100%;
@@ -469,10 +463,7 @@ NEED TO CREATE PALLETE MAYBE?
 #main-content {
   min-height: calc(100vh - 170px);
   overflow: hidden;
-  /* margin-top: 60px; */
   padding: 2rem 0 0 0;
-  /* add amount from disabled margin-top. */
-  /* min-height: calc(100vh - 210px); uneeded, wait until sure no side-affect. */
   h1 {
     text-align: center;
   }
