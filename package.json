@@ -44,5 +44,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+  },
+  "sasslintConfig": ".sass-lint.yml"
 }
