@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import { Link, graphql } from 'gatsby'
-
-import Layout from '../components/layoutOverrideForBlogPost'
+import Layout from '../components/layout'
 
 export default function Template ({ data, pageContext }) {
   const { markdownRemark: post } = data
@@ -15,14 +14,12 @@ export default function Template ({ data, pageContext }) {
       <Helmet title={`Lee Howard | ${post.frontmatter.title}`} />
       <article className="article">
 
-        <div className="container">
-          <header className="single-header">
-            <img alt="Post Graphics" width="64" height="64" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
-            <h1>{post.frontmatter.title}</h1>
-            <time className="post-page-date">{post.frontmatter.date}</time>
-          </header>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
+        <header className="single-header">
+          <img alt="Post Graphics" width="64" height="64" src={post.frontmatter.thumbnail.childImageSharp.fluid.src}/>
+          <h1>{post.frontmatter.title}</h1>
+          <time className="post-page-date">{post.frontmatter.date}</time>
+        </header>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
 
       <section className="section">
@@ -75,7 +72,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         thumbnail {
           childImageSharp {
-              id
+            id
             fluid {                 
               src                  
             }
