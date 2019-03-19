@@ -1,74 +1,73 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link , graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import Article from "../components/article";
+import Layout from '../components/layout'
+import Article from '../components/article'
 
 export default class ArticleIndex extends React.Component {
-  constructor() {
-    super();
+  constructor () {
+    super()
     this.state = {
       search: ''
     }
   }
 
-  updateSearch(event) {
-    this.setState({search: event.target.value.substr(0,20)});
+  updateSearch (event) {
+    this.setState({ search: event.target.value.substr(0, 20) })
   }
 
-  render() {
+  render () {
     const { data } = this.props
 
     const { edges: posts } = data.allMarkdownRemark
-    
+
     let filteredPosts = posts.filter(
-      (post)=> {
-        return post.node.frontmatter.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-      } 
-    );
+      (post) => {
+        return post.node.frontmatter.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+      }
+    )
 
-  return (
+    return (
 
-    <Layout>
-      <section className="section">
-      <header className="search-enabled">
-          <h1>Articles</h1>
+      <Layout>
+        <section className="section">
+          <header className="search-enabled">
+            <h1>Articles</h1>
 
-        <form
-          id="search-form"
-          role="search"
-          className="search-form"
-          >
-            <div className="search-wrapper">
-            <input type="text"
-            placeholder="Search"
-            value={this.state.search}
-            onChange={this.updateSearch.bind(this)}
-            />
-            <i className="search-icon icon-search"></i>
-        </div>
-          </form>
-        </header>
+            <form
+              id="search-form"
+              role="search"
+              className="search-form"
+            >
+              <div className="search-wrapper">
+                <input type="text"
+                  placeholder="Search"
+                  value={this.state.search}
+                  onChange={this.updateSearch.bind(this)}
+                />
+                <i className="search-icon icon-search"></i>
+              </div>
+            </form>
+          </header>
         </section>
         <section className="list">
-        {filteredPosts.map((post) => {
-           return <Link className="post" to={post.node.frontmatter.path}
-                        key={post.node.id}
-                        >
-                        <Article post={post} key={post.node.id}/> </Link>
-  
-        })
-      }
+          {filteredPosts.map((post) => {
+            return <Link className="post" to={post.node.frontmatter.path}
+              key={post.node.id}
+            >
+              <Article post={post} key={post.node.id}/> </Link>
+          })
+          }
         </section>
 
-    </Layout>
-  )
-        }
+      </Layout>
+    )
+  }
 }
 
 ArticleIndex.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object
 }
 
 export const pageQuery = graphql`
@@ -86,7 +85,7 @@ export const pageQuery = graphql`
             yearSlug
             thumbnail {
               childImageSharp {
-									id
+                id
                 fluid {                 
                   src                  
                 }

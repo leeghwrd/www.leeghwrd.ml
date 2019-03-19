@@ -25,33 +25,32 @@ const Layout = ({ children }) => (
       <ThemeContext.Consumer>
         {theme => (
           <div className={theme.dark ? 'dark' : 'light'}>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        
-        <main id="main-content">
-          <div className="container">
-              {children}
-          </div>
-        </main>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                { name: 'description', content: 'Sample' },
+                { name: 'keywords', content: 'sample, something' }
+              ]}
+            >
+              <html lang="en" />
+            </Helmet>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <main id="main-content">
+              <div className="container">
+                {children}
+              </div>
+            </main>
 
-        <Footer />
-        </div>
-         )}
-         </ThemeContext.Consumer>
+            <Footer />
+          </div>
+        )}
+      </ThemeContext.Consumer>
     )}
   />
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
