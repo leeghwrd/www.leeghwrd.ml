@@ -25,6 +25,7 @@
     "react-dom": "^16.7.0",
     "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
+    "react-icons": "^3.5.0",
     "sharp": "^0.21.1"
   },
   "keywords": [
