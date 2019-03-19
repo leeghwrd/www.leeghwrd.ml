@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Article from '../components/article'
+import { FaSearch } from 'react-icons/fa'
 
 export default class ArticleIndex extends React.Component {
   constructor () {
@@ -46,7 +47,7 @@ export default class ArticleIndex extends React.Component {
                   value={this.state.search}
                   onChange={this.updateSearch.bind(this)}
                 />
-                <i className="search-icon icon-search"></i>
+               <FaSearch className="search-icon"/>
               </div>
             </form>
           </header>

@@ -1,5 +1,3 @@
-@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
-
 $default-font-stack: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 html {
@@ -411,7 +409,13 @@ pre[class*='language-']::selection {
     .extra {
       display: -ms-flexbox;
       display: flex;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+
+      svg {
+        height: auto;
+        vertical-align: middle;
+        width: auto;
+      }
     }
   }
 
@@ -424,7 +428,27 @@ pre[class*='language-']::selection {
 
     &.nav-icon {
       cursor: pointer !important;
-      padding: .1rem .5rem;
+      padding: 0 .5rem;
+
+      .moon-icon {
+        color: #d0d5d2;
+      }
+
+      .sun-icon {
+        color: #f9d71c;
+      }
+
+      .github-icon {
+        color: #333;
+      }
+
+      .twitter-icon {
+        color: #00aced;
+      }
+
+      .linkedin-icon {
+        color: #0077b5;
+      }
     }
   }
 }
@@ -710,7 +734,6 @@ button {
   border: 0;
   color: #666;
   cursor: pointer;
-  font-size: 1.6rem;
 }
 
 .light {
@@ -773,6 +796,12 @@ button {
     }
 
     .extra {
+      .nav-icon {
+        .github-icon {
+          color: #777c85;
+        }
+      }
+
       a {
         &:hover {
           background: #202020;
@@ -872,18 +901,18 @@ button {
         }
       }
 
-      .extra {
-        a {
-          font-size: 1.5rem;
-        }
-      }
+      // .extra {
+      //   a {
+      //     font-size: 1.5rem;
+      //   }
+      // }
     }
 
-    .nav-icon {
-      a {
-        padding: .5rem .6rem;
-      }
-    }
+    // .nav-icon {
+    //   a {
+    //     padding: .5rem .6rem;
+    //   }
+    // }
   }
 
   #main-content {
@@ -995,14 +1024,24 @@ button {
           margin-right: .1rem;
         }
       }
+
+      .extra {
+        .moon-icon {
+          margin-bottom: .2rem;
+        }
+
+        svg {
+          margin-bottom: .3rem;
+        }
+      }
     }
 
     a {
       padding: .7rem 1.1rem;
 
-      &.nav-icon {
-        padding: .4rem .8rem;
-      }
+      // &.nav-icon {
+      //   padding: .4rem .6rem;
+      // }
     }
   }
 
