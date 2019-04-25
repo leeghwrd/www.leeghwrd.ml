@@ -6,7 +6,7 @@ const AboutMe = () => (
   <Layout>
     <section className="section">
       <h1>Hi, I'm Lee.</h1>
-      <p className="lead">Junior iOS<strong> Developer</strong> and <strong>former</strong> datacenter tech from <strong>Silicon Valley</strong>. I'm currently doing freelance iOS development. I also enjoy following <strong>Open Source</strong> ranging from<strong> Fullstack Web Development</strong> using the latest<strong> Javascript </strong> technologies, to projects created with <strong>C++</strong>.</p>
+      <p className="lead">A long time technology enthusiast, <strong>Web Developer</strong>, formerly working as an IT Professional. Born and currently located in the heart of <strong>Silicon Valley</strong>.. I love how software development has evolved through the years, and I want to be a part of it.</p>
     </section>
     <section className="section">
       <blockquote>
