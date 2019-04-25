@@ -663,13 +663,16 @@ textarea {
 .article {
   margin-bottom: 5rem;
 
-  h2,
+  h2 {
+    margin: 0 0 1rem;
+  }
+
   h3 {
-    margin: 0 0 .5rem;
+    margin: 0 0 1.6rem;
   }
 
   p {
-    margin: 0 0 2.5rem;
+    margin: 0 0 1.5rem;
   }
 }
 
@@ -960,13 +963,6 @@ button {
 
   .single-header {
     text-align: left;
-  }
-
-  .article {
-    h2,
-    h3 {
-      margin: 0 0 .8rem;
-    }
   }
 
   .pn-container {
