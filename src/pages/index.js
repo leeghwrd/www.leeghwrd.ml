@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { FaBeer } from 'react-icons/fa'
 
 export default function HomeIndex ({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -30,7 +31,7 @@ export default function HomeIndex ({ data }) {
         </h2>
         <a className="post" href="https://github.com/leeghwrd/CocktailsDB">
           <div className="post-thumbnail">
-            <i className="icon-beer"></i>
+            <FaBeer />
           </div>
           <div className="post-title">CocktailsDB</div>
           <div className="post-description">iOS/Swift4 app - generates a random drink with the press of a button.</div>
