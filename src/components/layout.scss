@@ -351,7 +351,6 @@ pre[class*='language-']::selection {
 
 .nav {
   background: #fff;
-  border-bottom: 2px solid #eee;
   font-size: .85rem;
   width: 100%;
   z-index: 1;
@@ -452,6 +451,31 @@ pre[class*='language-']::selection {
       }
     }
   }
+}
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  .nav {
+    border-bottom: 2px solid #eee;
+  }
+  transition: transform 400ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
 }
 
 #main-content {

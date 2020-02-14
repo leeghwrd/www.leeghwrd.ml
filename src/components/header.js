@@ -15,9 +15,7 @@ import { FaSun,
 const Header = ({ siteTitle }) => (
   <ThemeContext.Consumer>
     {theme => (
-      <Headroom style={{
-        position: 'fixed' // overrides default 'relative postion' - caused jumping nav.
-      }}>
+      <Headroom upTolerance="4" downTolerance="4">
         <nav className="nav">
           <div className="nav-container">
             <div className="brand">
