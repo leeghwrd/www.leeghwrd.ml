@@ -15,7 +15,7 @@ import { FaSun,
 const Header = ({ siteTitle }) => (
   <ThemeContext.Consumer>
     {theme => (
-      <Headroom upTolerance="4" downTolerance="4">
+      <Headroom upTolerance={4} downTolerance={4}>
         <nav className="nav">
           <div className="nav-container">
             <div className="brand">
