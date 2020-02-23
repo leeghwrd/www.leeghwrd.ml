@@ -1,11 +1,11 @@
-# lghoward.com 🚀
+# lghoward.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1252a11a-573e-49b0-9e7e-509eee223f33/deploy-status)](https://app.netlify.com/sites/lghoward/deploys)
 
-Gatsby powered blog, and personal portfolio site I created totally based off https://www.taniarascia.com/ - a totally awesome blog, from another self taught developer.
+Personal portfolio, and blog powered by GatsbyJS.
 
-## To-Do [UPDATED 3.11.19]
-
+## To-Do [UPDATED 2.23.20]
+- [ ] fix scroll bar padding
 - [ ] comments.
 - [ ] highlight matching search results.
 - [ ] image sharp to include photo's in articles.
