@@ -6,7 +6,7 @@ html {
   -webkit-text-size-adjust: 100%;
   font: normal normal normal 1rem/1.6 $default-font-stack;
   font-size: 1rem;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 *,
@@ -480,7 +480,6 @@ pre[class*='language-']::selection {
 
 #main-content {
   min-height: calc(100vh - 170px);
-  overflow: hidden;
   padding: 2rem 0 0;
 
   h1 {
