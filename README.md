@@ -45,4 +45,4 @@ navigate to http://localhost:8000
 - [ ] fix scroll bar padding
 - [ ] comments.
 - [ ] highlight matching search results.
-- [ ] image sharp to include photo's in articles.
+- [✅] image sharp to include photo's in articles.
