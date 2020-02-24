@@ -1069,3 +1069,23 @@ button {
     padding: 50px 0 0;
   }
 }
+
+
+//
+// Temporary fix for smaller screen sizes
+// : width of 320px and smaller
+
+@media (max-width: 320px) {
+  .nav {
+
+    .nav-container {
+      padding: 4px;
+      .links {
+        padding-top: 0.2rem;
+        a{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
