@@ -23,7 +23,6 @@ export default function Template ({ data, pageContext }) {
       </article>
 
       <section className="section">
-        <div className="container">
           <div className="pn-container">
             {prev === false ? null : (
               <div className="prev">
@@ -51,7 +50,6 @@ export default function Template ({ data, pageContext }) {
               </div>
             )}
           </div>
-        </div>
       </section>
     </Layout>
   )
