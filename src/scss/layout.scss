@@ -712,7 +712,7 @@ textarea {
 
 .prev {
   display: flex;
-  padding-bottom: .2rem;
+  padding-bottom: 1rem;
 }
 
 .next {
@@ -742,8 +742,15 @@ textarea {
   margin: 0;
 }
 
+.pn-title-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
 .pn-title-right {
   justify-content: flex-end;
+  text-align: right;
 }
 
 // removes blue border from button
