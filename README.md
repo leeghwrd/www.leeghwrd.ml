@@ -22,22 +22,34 @@ git clone https://github.com/leeghwrd/lghoward.com.git
 
 Install dependencies:
 
-```shell
+```bash
 cd lghoward.com
 ```
 
-```shell
+```bash
 npm install
 ```
 
 Start development server:
+```bash
+npm run dev
+```
+
+Open web browser:
+navigate to http://localhost:8000
+
+
+Or 
+
+
+Start mock production server:
+
 ```shell
 npm start
 ```
 
 Open web browser:
-
-navigate to http://localhost:8000
+navigate to http://localhost:8080
 
 =================================================
 

@@ -34,9 +34,10 @@
   ],
   "license": "MIT",
   "scripts": {
+    "dev": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "prestart": "npm run clean && npm run build",
+    "start": "http-server public/",
     "clean": "gatsby clean",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
