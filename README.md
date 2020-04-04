@@ -1,8 +1,7 @@
-# lghoward.com
+# Home of Lee Howard
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1252a11a-573e-49b0-9e7e-509eee223f33/deploy-status)](https://app.netlify.com/sites/lghoward/deploys)
+https://leeghwrd.ml
 
-Personal portfolio, and blog powered by GatsbyJS.
 
 ## Installation
 
@@ -12,18 +11,18 @@ Clone repo:
 
 git
 ```shell
-git clone git@github.com:leeghwrd/lghoward.com.git
+git clone git@github.com:leeghwrd/leeghwrd.ml.git
 ```
 
 https
 ```shell
-git clone https://github.com/leeghwrd/lghoward.com.git
+git clone https://github.com/leeghwrd/leeghwrd.ml.git
 ```
 
 Install dependencies:
 
 ```bash
-cd lghoward.com
+cd leeghwrd.ml
 ```
 
 ```bash
