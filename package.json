@@ -40,11 +40,13 @@
     "start": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "sass-lint -v",
     "lint:fix": "sass-lint-auto-fix"
   },
   "devDependencies": {
+    "babel-jest": "^25.2.6",
+    "babel-preset-gatsby": "^0.3.1",
     "eslint": "^5.15.2",
     "eslint-config-react-app": "^5.2.0",
     "eslint-config-standard": "^12.0.0",
@@ -52,7 +54,10 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.15.3"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.7",
+    "prettier": "^1.15.3",
+    "react-test-renderer": "^16.13.1"
   },
   "repository": {
     "type": "git",
