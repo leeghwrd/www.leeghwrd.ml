@@ -69,7 +69,7 @@ exports[`Header renders correctly 1`] = `
           className="extra"
         >
           <button
-            className="dark-switcher nav-icon"
+            className="dark-switcher"
             onClick={[Function]}
           >
             <svg
