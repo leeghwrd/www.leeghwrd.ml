@@ -41,9 +41,7 @@
     "clean": "gatsby clean",
     "test": "jest",
     "lint_js": "eslint --config .eslintrc.js .",
-    "lint_js:fix": "eslint --config .eslintrc.js --fix .",
-    "lint_sass": "sass-lint -v",
-    "lint_sass:fix": "sass-lint-auto-fix"
+    "lint_js:fix": "eslint --config .eslintrc.js --fix ."
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -68,6 +66,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/leeghwrd/leeghwrd.ml.git"
-  },
-  "sasslintConfig": ".sass-lint.yml"
+  }
 }
