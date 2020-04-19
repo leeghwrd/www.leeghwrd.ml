@@ -1,75 +1,76 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/layout'
-import Article from '../components/article'
-import { FaSearch } from 'react-icons/fa'
+import Layout from "../components/layout";
+import Article from "../components/article";
+import { FaSearch } from "react-icons/fa";
 
 export default class ArticleIndex extends React.Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
     this.state = {
-      search: ''
-    }
+      search: ""
+    };
   }
 
-  updateSearch (event) {
-    this.setState({ search: event.target.value.substr(0, 20) })
+  updateSearch(event) {
+    this.setState({ search: event.target.value.substr(0, 20) });
   }
 
-  render () {
-    const { data } = this.props
+  render() {
+    const { data } = this.props;
 
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: posts } = data.allMarkdownRemark;
 
-    let filteredPosts = posts.filter(
-      (post) => {
-        return post.node.frontmatter.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
-      }
-    )
+    let filteredPosts = posts.filter(post => {
+      return (
+        post.node.frontmatter.title
+          .toLowerCase()
+          .indexOf(this.state.search.toLowerCase()) !== -1
+      );
+    });
 
     return (
-
       <Layout>
         <section className="section">
           <header className="search-enabled">
             <h1>Articles</h1>
 
-            <form
-              id="search-form"
-              role="search"
-              className="search-form"
-            >
+            <form id="search-form" role="search" className="search-form">
               <div className="search-wrapper">
-                <input type="text"
+                <input
+                  type="text"
                   placeholder="Search"
                   value={this.state.search}
                   onChange={this.updateSearch.bind(this)}
                 />
-               <FaSearch className="search-icon"/>
+                <FaSearch className="search-icon" />
               </div>
             </form>
           </header>
         </section>
         <section className="list">
-          {filteredPosts.map((post) => {
-            return <Link className="post" to={post.node.frontmatter.path}
-              key={post.node.id}
-            >
-              <Article post={post} key={post.node.id}/> </Link>
-          })
-          }
+          {filteredPosts.map(post => {
+            return (
+              <Link
+                className="post"
+                to={post.node.frontmatter.path}
+                key={post.node.id}
+              >
+                <Article post={post} key={post.node.id} />{" "}
+              </Link>
+            );
+          })}
         </section>
-
       </Layout>
-    )
+    );
   }
 }
 
 ArticleIndex.propTypes = {
   data: PropTypes.object
-}
+};
 
 export const pageQuery = graphql`
   query ArticleIndexQuery {
@@ -87,8 +88,8 @@ export const pageQuery = graphql`
             thumbnail {
               childImageSharp {
                 id
-                fluid {                 
-                  src                  
+                fluid {
+                  src
                 }
               }
             }
@@ -97,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
