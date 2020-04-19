@@ -39,7 +39,6 @@
     "prestart": "npm run clean && npm run build",
     "start": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"src/**/*.js\"",
     "test": "jest",
     "lint_js": "eslint --config .eslintrc.js .",
     "lint_js:fix": "eslint --config .eslintrc.js --fix .",
