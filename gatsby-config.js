@@ -1,26 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: 'Lee Howard',
+    title: "Lee Howard"
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-eslint",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/articles`,
-        name: `articles`,
-      },
+        name: `articles`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -29,8 +30,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
-            },
+              maxWidth: 800
+            }
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -65,47 +66,46 @@ module.exports = {
               showLineNumbers: false,
               // If setting this to true, the parser won't handle and highlight inline
               // code used in markdown i.e. single backtick code like `this`.
-              noInlineHighlight: true,
-            },
-          },
-        ],
-      },
+              noInlineHighlight: true
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Lee Howard',
-        short_name: 'leeghwrd',
-        start_url: '/',
-        background_color: '#285680',
-        theme_color: '#285680',
-        display: 'fullscreen',
-        icon: 'src/images/brand.svg', // This path is relative to the root of the site.
-      },
-      
+        name: "Lee Howard",
+        short_name: "leeghwrd",
+        start_url: "/",
+        background_color: "#285680",
+        theme_color: "#285680",
+        display: "fullscreen",
+        icon: "src/images/brand.svg" // This path is relative to the root of the site.
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/favicon.svg",
-  
+
         // WebApp Manifest Configuration
         appName: null, // Inferred with your package.json
         appDescription: null,
         developerName: null,
         developerURL: null,
-        dir: 'auto',
-        lang: 'en-US',
-        background: '#fff',
-        theme_color: '#fff',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
-  
+        dir: "auto",
+        lang: "en-US",
+        background: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        orientation: "any",
+        start_url: "/?homescreen=1",
+        version: "1.0",
+
         icons: {
           android: true,
           appleIcon: true,
@@ -120,6 +120,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-netlify`,
-  ],
-}
+    `gatsby-plugin-netlify`
+  ]
+};

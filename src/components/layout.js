@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
-import Header from './header'
-import Footer from './footer'
+import Header from "./header";
+import Footer from "./footer";
 
-import '../scss/layout.scss'
+import "../scss/layout.scss";
 
-import ThemeContext from '../context/ThemeContext'
+import ThemeContext from "../context/ThemeContext";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,21 +24,19 @@ const Layout = ({ children }) => (
     render={data => (
       <ThemeContext.Consumer>
         {theme => (
-          <div className={theme.dark ? 'dark' : 'light'}>
+          <div className={theme.dark ? "dark" : "light"}>
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Sample' },
-                { name: 'keywords', content: 'sample, something' }
+                { name: "description", content: "Sample" },
+                { name: "keywords", content: "sample, something" }
               ]}
             >
               <html lang="en" />
             </Helmet>
             <Header siteTitle={data.site.siteMetadata.title} />
             <main id="main-content">
-              <div className="container">
-                {children}
-              </div>
+              <div className="container">{children}</div>
             </main>
 
             <Footer />
@@ -47,10 +45,10 @@ const Layout = ({ children }) => (
       </ThemeContext.Consumer>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
-}
+};
 
-export default Layout
+export default Layout;

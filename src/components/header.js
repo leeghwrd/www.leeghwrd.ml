@@ -1,16 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import brandImg from '../images/brand.svg'
-import Headroom from 'react-headroom'
-import ThemeContext from '../context/ThemeContext'
+import React from "react";
+import { Link } from "gatsby";
+import brandImg from "../images/brand.svg";
+import Headroom from "react-headroom";
+import ThemeContext from "../context/ThemeContext";
+import PropTypes from "prop-types";
 
-import { IconContext } from 'react-icons'
-import { FaSun,
-  FaMoon,
-  FaGithub,
-  FaTwitter,
-  FaLinkedin
-} from 'react-icons/fa'
+import { FaSun, FaMoon, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Header = ({ siteTitle }) => (
   <ThemeContext.Consumer>
@@ -19,7 +14,10 @@ const Header = ({ siteTitle }) => (
         <nav className="nav">
           <div className="nav-container">
             <div className="brand">
-              <Link to="/"><img src={brandImg} className="brand-icon" alt="brand"/><span>{siteTitle}</span></Link>
+              <Link to="/">
+                <img src={brandImg} className="brand-icon" alt="brand" />
+                <span>{siteTitle}</span>
+              </Link>
             </div>
             <div className="links">
               <Link to="/about/">About me</Link>
@@ -27,28 +25,54 @@ const Header = ({ siteTitle }) => (
               <Link to="/resources/">Resources</Link>
             </div>
             <div className="extra">
-
-              <a className="dark-switcher nav-icon" onClick={ theme.toggleDark }>
-                {theme.dark ? <FaSun className="sun-icon"/> : <FaMoon className="moon-icon" /> }
+              <button
+                className="dark-switcher nav-icon"
+                onClick={theme.toggleDark}
+              >
+                {theme.dark ? (
+                  <FaSun className="sun-icon" />
+                ) : (
+                  <FaMoon className="moon-icon" />
+                )}
+              </button>
+              <a
+                href="https://github.com/leeghwrd"
+                aria-label="github"
+                className="nav-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="github-icon" />
               </a>
-              <a href="https://github.com/leeghwrd" aria-label="github" className="nav-icon" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="github-icon"/>
+              <a
+                href="https://twitter.com/leeghwrd"
+                aria-label="twitter"
+                className="nav-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter className="twitter-icon" />
               </a>
-              <a href="https://twitter.com/leeghwrd" aria-label="twitter" className="nav-icon" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="twitter-icon"/>
+              <a
+                href="https://www.linkedin.com/in/leeghwrd"
+                aria-label="linkedin"
+                className="nav-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="linkedin-icon" />
               </a>
-              <a href="https://www.linkedin.com/in/leeghwrd" aria-label="linkedin" className="nav-icon" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="linkedin-icon"/>
-              </a>
-              <div>
-              </div>
+              <div></div>
             </div>
           </div>
         </nav>
       </Headroom>
     )}
   </ThemeContext.Consumer>
+);
 
-)
+export default Header;
 
-export default Header
+Header.propTypes = {
+  siteTitle: PropTypes.string
+};
