@@ -430,14 +430,6 @@ pre[class*='language-']::selection {
       cursor: pointer !important;
       padding: 0 .5rem;
 
-      .moon-icon {
-        color: #d0d5d2;
-      }
-
-      .sun-icon {
-        color: #f9d71c;
-      }
-
       .github-icon {
         color: #333;
       }
@@ -764,10 +756,28 @@ button {
 // Dark mode styles
 
 .dark-switcher {
-  background: transparent;
-  border: 0;
+  background-color: transparent;
+  border: none;
   color: #666;
-  cursor: pointer;
+  cursor: pointer!important;
+  display: block;
+  font-size: 1.3rem;
+  margin: 0 .1rem;
+  padding: 0 .5rem;
+
+  .moon-icon {
+    color: #d0d5d2;
+  }
+
+  .sun-icon {
+    color: #f9d71c;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
 }
 
 .light {
