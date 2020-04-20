@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const defaultState = {
   dark: false,
-  toggleDark: () => {}
+  toggleDark: () => {},
 };
 
 const ThemeContext = React.createContext(defaultState);
@@ -15,7 +15,7 @@ const ThemeContext = React.createContext(defaultState);
 
 class ThemeProvider extends React.Component {
   state = {
-    dark: false
+    dark: false,
   };
 
   toggleDark = () => {
@@ -45,7 +45,7 @@ class ThemeProvider extends React.Component {
       <ThemeContext.Provider
         value={{
           dark,
-          toggleDark: this.toggleDark
+          toggleDark: this.toggleDark,
         }}
       >
         {children}
@@ -59,5 +59,5 @@ export default ThemeContext;
 export { ThemeProvider };
 
 ThemeProvider.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };

@@ -8,7 +8,7 @@ const Footer = () => (
         <strong
           style={{
             fontSize: `.9rem`,
-            fontWeight: `500`
+            fontWeight: `500`,
           }}
         >
           {" Lee Howard"}

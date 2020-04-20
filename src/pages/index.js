@@ -16,7 +16,7 @@ export default function HomeIndex({ data }) {
           </Link>
         </h2>
         {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
+          .filter((post) => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => (
             <Link to={post.frontmatter.path} key={post.id} className="post">
               <div className="post-thumbnail">
@@ -59,7 +59,7 @@ export default function HomeIndex({ data }) {
 }
 
 HomeIndex.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 export const pageQuery = graphql`

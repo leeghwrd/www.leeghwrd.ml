@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
@@ -65,7 +65,7 @@ export default function Template({ data, pageContext }) {
 
 Template.propTypes = {
   data: PropTypes.object,
-  pageContext: PropTypes.any
+  pageContext: PropTypes.any,
 };
 
 export const pageQuery = graphql`
