@@ -17,5 +17,5 @@ export const wrapRootElement = ({ element }) => (
 // highlight-end
 
 wrapRootElement.propTypes = {
-  element: PropTypes.any
+  element: PropTypes.any,
 };

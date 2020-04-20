@@ -65,7 +65,7 @@ export default function Template({ data, pageContext }) {
 
 Template.propTypes = {
   data: PropTypes.object,
-  pageContext: PropTypes.any
+  pageContext: PropTypes.any,
 };
 
 export const pageQuery = graphql`

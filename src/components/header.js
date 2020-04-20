@@ -9,7 +9,7 @@ import { FaSun, FaMoon, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Header = ({ siteTitle }) => (
   <ThemeContext.Consumer>
-    {theme => (
+    {(theme) => (
       <Headroom upTolerance={4} downTolerance={4}>
         <nav className="nav">
           <div className="nav-container">
@@ -71,5 +71,5 @@ const Header = ({ siteTitle }) => (
 export default Header;
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 };

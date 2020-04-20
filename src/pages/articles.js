@@ -10,7 +10,7 @@ export default class ArticleIndex extends React.Component {
   constructor() {
     super();
     this.state = {
-      search: ""
+      search: "",
     };
   }
 
@@ -23,7 +23,7 @@ export default class ArticleIndex extends React.Component {
 
     const { edges: posts } = data.allMarkdownRemark;
 
-    let filteredPosts = posts.filter(post => {
+    let filteredPosts = posts.filter((post) => {
       return (
         post.node.frontmatter.title
           .toLowerCase()
@@ -51,7 +51,7 @@ export default class ArticleIndex extends React.Component {
           </header>
         </section>
         <section className="list">
-          {filteredPosts.map(post => {
+          {filteredPosts.map((post) => {
             return (
               <Link
                 className="post"
@@ -69,7 +69,7 @@ export default class ArticleIndex extends React.Component {
 }
 
 ArticleIndex.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 export const pageQuery = graphql`
