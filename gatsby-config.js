@@ -8,6 +8,15 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: "@danbruegge/gatsby-plugin-stylelint",
+      options: {
+        files: [
+          `${__dirname}/src/**/*.{js,jsx}`,
+          `${__dirname}/src/scss/**/*.{css,scss}`
+        ]
+      }
+    },
     "gatsby-plugin-eslint",
     {
       resolve: `gatsby-source-filesystem`,

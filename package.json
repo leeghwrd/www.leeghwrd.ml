@@ -41,9 +41,12 @@
     "clean": "gatsby clean",
     "test": "jest",
     "lint_js": "eslint --config .eslintrc.js .",
-    "lint_js:fix": "eslint --config .eslintrc.js --fix ."
+    "lint_js:fix": "eslint --config .eslintrc.js --fix .",
+    "lint_scss": "stylelint -s scss 'src/scss/*.scss'",
+    "lint_scss:fix": "stylelint -s scss 'src/scss/*.scss' --fix"
   },
   "devDependencies": {
+    "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.2.6",
     "babel-preset-gatsby": "^0.3.1",
@@ -61,7 +64,13 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.2.7",
     "prettier": "^1.15.3",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "stylelint": "^13.3.2",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.17.0"
   },
   "repository": {
     "type": "git",

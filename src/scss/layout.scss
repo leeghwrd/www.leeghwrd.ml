@@ -1,12 +1,13 @@
-$default-font-stack: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+$default-font-stack: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+  Helvetica, Arial, sans-serif;
 
 html {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
   font: normal normal normal 1rem/1.6 $default-font-stack;
   font-size: 1rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
 }
 
 *,
@@ -50,12 +51,8 @@ table {
 }
 
 ul {
-  -webkit-padding-start: 2rem;
   margin: 0 0 2rem;
-
-  ul {
-    list-style-type: disc;
-  }
+  -webkit-padding-start: 2rem;
 }
 
 ol,
@@ -87,9 +84,6 @@ blockquote {
   }
 }
 
-
-
-
 // STOP UNDO
 // ###############  BEGIN SYNTAX HIGHTLIGHTING ####################
 
@@ -99,39 +93,39 @@ blockquote {
 
 kbd {
   background-color: #f7f7f7;
-  border: 1px solid rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .2), inset 0 0 0 2px #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 2px #fff;
   color: #333;
   display: inline-block;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  margin: 0 .1em;
-  padding: .1em .6em;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
   text-shadow: 0 1px 0 #fff;
 }
 
 code {
-  &[class*='language-'] {
-    -moz-tab-size: 2;
-    -ms-hyphens: none;
-    -o-tab-size: 2;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-hyphens: none;
+  &[class*="language-"] {
     background-color: #333;
     border-radius: 4px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, .15);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
     color: #b3b9c5;
     direction: ltr;
     display: block;
     font-family: Menlo, Roboto Mono, Courier New, monospace;
     font-size: 13px;
+    -webkit-font-smoothing: subpixel-antialiased;
     font-weight: 400;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
     hyphens: none;
     line-height: 1.7;
     overflow: auto;
     padding: 1.5rem;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
     tab-size: 2;
     text-align: left;
     white-space: pre;
@@ -139,31 +133,31 @@ code {
     word-spacing: normal;
   }
 
-  &[class*='language-css'],
-  &[class*='language-less'],
-  &[class*='language-sass'],
-  &[class*='language-scss'] {
+  &[class*="language-css"],
+  &[class*="language-less"],
+  &[class*="language-sass"],
+  &[class*="language-scss"] {
     color: #c9c;
   }
 }
 
 pre {
-  &[class*='language-'] {
-    -moz-tab-size: 2;
-    -ms-hyphens: none;
-    -o-tab-size: 2;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-hyphens: none;
+  &[class*="language-"] {
     background: 0 0;
     border: 0;
     border-radius: 4px;
     color: #b3b9c5;
     direction: ltr;
     font-size: 13px;
+    -webkit-font-smoothing: subpixel-antialiased;
     font-weight: 400;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
     hyphens: none;
     line-height: 1.7;
     margin: 0;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
     tab-size: 2;
     text-align: left;
     white-space: pre;
@@ -182,10 +176,10 @@ pre {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   color: #eee;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: -4px;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .token {
@@ -201,7 +195,7 @@ pre {
   }
 
   &.namespace {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &.attr-value,
@@ -273,11 +267,10 @@ pre {
   &.italic {
     font-style: italic;
   }
-
 }
 
 .line-highlight {
-  background: hsla(0, 0%, 59%, .1);
+  background: hsla(0, 0%, 59%, 0.1);
   left: 0;
   line-height: inherit;
   margin-top: 1rem;
@@ -293,33 +286,33 @@ pre {
     color: transparent;
     content: attr(data-start);
     font: 700 65% / 1.5 sans-serif;
-    left: .6em;
+    left: 0.6em;
     min-width: 1em;
-    padding: 0 .5em;
+    padding: 0 0.5em;
     position: absolute;
     text-align: center;
     text-shadow: none;
-    top: .4em;
-    vertical-align: .3em;
+    top: 0.4em;
+    vertical-align: 0.3em;
   }
 
   &[data-end]::after {
     background-color: transparent;
     border-radius: 999px;
-    bottom: .4em;
+    bottom: 0.4em;
     color: transparent;
     content: attr(data-end);
     content: attr(data-start);
     font: 700 65% / 1.5 sans-serif;
-    left: .6em;
+    left: 0.6em;
     min-width: 1em;
-    padding: 0 .5em;
+    padding: 0 0.5em;
     position: absolute;
     text-align: center;
     text-shadow: none;
-    top: .4em;
+    top: 0.4em;
     top: auto;
-    vertical-align: .3em;
+    vertical-align: 0.3em;
   }
 }
 
@@ -335,31 +328,55 @@ code::-moz-selection,
 pre::-moz-selection,
 code::selection,
 pre::selection,
-code[class*='language-'] ::-moz-selection,
-pre[class*='language-']::-moz-selection,
-code[class*='language-'] ::selection,
-pre[class*='language-']::selection {
-  background: hsla(0, 0%, 59%, .3) !important;
+code[class*="language-"] ::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+code[class*="language-"] ::selection,
+pre[class*="language-"]::selection {
+  background: hsla(0, 0%, 59%, 0.3) !important;
   color: inherit;
   text-shadow: none;
 }
 
-
 // ###############  END SYNTAX HIGHTLIGHTING ####################
 
-// color: #0077b5; LinkedIn Blue 
+/* color: #0077b5; LinkedIn Blue */
 
 .nav {
   background: #fff;
-  font-size: .85rem;
+  font-size: 0.85rem;
   width: 100%;
   z-index: 1;
 
+  a {
+    border-radius: 4px;
+    color: #666;
+    display: block;
+    margin: 0 0.1rem;
+    padding: 0.5rem 0.6rem;
+
+    &.nav-icon {
+      cursor: pointer !important;
+      padding: 0 0.5rem;
+
+      .github-icon {
+        color: #333;
+      }
+
+      .twitter-icon {
+        color: #00aced;
+      }
+
+      .linkedin-icon {
+        color: #0077b5;
+      }
+    }
+  }
+
   .nav-container {
-    -ms-flex-pack: justify;
-    -ms-flex-wrap: wrap;
     align-items: center;
     display: flex;
+    -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
@@ -376,33 +393,33 @@ pre[class*='language-']::selection {
       }
 
       span {
-        margin-left: .3rem;
+        margin-left: 0.3rem;
       }
 
       a {
-        -ms-flex-align: center;
         align-items: center;
         color: #555;
         display: -ms-flexbox;
         display: flex;
+        -ms-flex-align: center;
         font-size: 1.14rem;
-        margin-top: .31rem;
+        margin-top: 0.31rem;
         padding: 0;
       }
     }
 
     .links {
-      -ms-flex-order: 2;
-      -ms-flex-pack: center;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-order: 2;
+      -ms-flex-pack: center;
       justify-content: center;
       order: 2;
       width: 100%;
 
       a {
         font-size: 1rem;
-        margin-right: .8rem;
+        margin-right: 0.8rem;
       }
     }
 
@@ -418,37 +435,12 @@ pre[class*='language-']::selection {
       }
     }
   }
-
-  a {
-    border-radius: 4px;
-    color: #666;
-    display: block;
-    margin: 0 .1rem;
-    padding: .5rem .6rem;
-
-    &.nav-icon {
-      cursor: pointer !important;
-      padding: 0 .5rem;
-
-      .github-icon {
-        color: #333;
-      }
-
-      .twitter-icon {
-        color: #00aced;
-      }
-
-      .linkedin-icon {
-        color: #0077b5;
-      }
-    }
-  }
 }
 
 .headroom {
-  top: 0;
   left: 0;
   right: 0;
+  top: 0;
   z-index: 1;
 }
 .headroom--unfixed {
@@ -470,15 +462,6 @@ pre[class*='language-']::selection {
   transform: translateY(0%);
 }
 
-#main-content {
-  min-height: calc(100vh - 170px);
-  padding: 2rem 0 0;
-
-  h1 {
-    text-align: center;
-  }
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -498,10 +481,10 @@ pre[class*='language-']::selection {
   }
 
   > h2 {
-    -ms-flex-align: center;
     align-items: center;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
   }
 }
 
@@ -510,11 +493,11 @@ pre[class*='language-']::selection {
 }
 
 .footer {
-  -ms-flex-align: center;
   align-items: center;
   color: #777c85;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   height: 100px;
 
   strong {
@@ -522,14 +505,42 @@ pre[class*='language-']::selection {
   }
 }
 
+[type="color"],
+[type="date"],
+[type="datetime-local"],
+[type="datetime"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  max-width: 100%;
+  outline: none;
+  padding: 0.75rem;
+  width: 100%;
+}
+
 .search-enabled {
-  -ms-flex-align: center;
-  -ms-flex-direction: column;
-  -ms-flex-pack: justify;
   align-items: center;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 2rem;
 
@@ -541,51 +552,22 @@ pre[class*='language-']::selection {
 .search-wrapper {
   position: relative;
 
-  [type='search'] {
+  [type="search"] {
     -webkit-appearance: none;
     padding-right: 2rem;
   }
 }
 
-.search-form [type='search'] {
+.search-form [type="search"] {
   background: #f2f2f2;
   border: 0;
   width: auto;
 }
 
-[type='color'],
-[type='date'],
-[type='datetime-local'],
-[type='datetime'],
-[type='email'],
-[type='month'],
-[type='number'],
-[type='password'],
-[type='search'],
-[type='tel'],
-[type='text'],
-[type='time'],
-[type='url'],
-[type='week'],
-
-select,
-textarea {
-  background: #f2f2f2;
-  border: 1px solid #f2f2f2;
-  border-radius: 4px;
-  display: block;
-  font-size: 1rem;
-  line-height: 1;
-  max-width: 100%;
-  outline: none;
-  padding: .75rem;
-  width: 100%;
-}
-
 .search-icon {
   position: absolute;
-  right: .6rem;
-  top: calc(50% - .5em);
+  right: 0.6rem;
+  top: calc(50% - 0.5em);
 }
 
 .view-all {
@@ -593,21 +575,21 @@ textarea {
   border: 1px solid #f2f2f2;
   border-radius: 4px;
   color: #404040;
-  font-size: .85rem;
-  margin-left: .5rem;
-  padding: .6rem .8rem;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+  padding: 0.6rem 0.8rem;
 }
 
 .post {
-  -ms-flex-align: center;
-  -ms-flex-pack: justify;
   align-items: center;
   border-bottom: 2px solid #f2f2f2;
   border-radius: 4px;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: .75rem;
+  padding: 0.75rem;
 
   &:last-of-type {
     border-bottom: 0;
@@ -629,32 +611,28 @@ textarea {
 }
 
 .post-title {
-  -ms-flex: 2;
   color: #333;
+  -ms-flex: 2;
   flex: 2;
   font-size: 1.1rem;
   line-height: 1.4;
   min-height: 30px;
-  padding-top: .16rem;
-
-  a {
-    display: flex;
-  }
+  padding-top: 0.16rem;
 }
 
 .post-description {
-  -ms-flex: 8;
   color: #767676;
   display: none;
+  -ms-flex: 8;
   flex: 8;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 0 2rem 0 1rem;
 }
 
 .post-date {
   color: #767676;
   display: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .single-header {
@@ -662,7 +640,7 @@ textarea {
   text-align: center;
 
   h1 {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
 
   img {
@@ -672,7 +650,7 @@ textarea {
 
 .post-page-date {
   color: #888;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -710,12 +688,12 @@ textarea {
 .next {
   display: flex;
   justify-content: flex-end;
-  padding-top: .2rem;
+  padding-top: 0.2rem;
 }
 
 .pn-header {
   display: flex;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   margin: 0;
 }
@@ -739,7 +717,6 @@ textarea {
   text-align: left;
 }
 
-
 .pn-title-right {
   justify-content: flex-end;
   text-align: right;
@@ -759,11 +736,11 @@ button {
   background-color: transparent;
   border: none;
   color: #666;
-  cursor: pointer!important;
+  cursor: pointer !important;
   display: block;
   font-size: 1.3rem;
-  margin: 0 .1rem;
-  padding: 0 .5rem;
+  margin: 0 0.1rem;
+  padding: 0 0.5rem;
 
   .moon-icon {
     color: #d0d5d2;
@@ -777,7 +754,6 @@ button {
   &:focus {
     text-decoration: none;
   }
-
 }
 
 .light {
@@ -798,25 +774,45 @@ button {
   .nav {
     background-color: #202020;
     border-bottom: 2px solid #202020;
-  }
 
-  .nav-container {
-    .brand {
+    .nav-container {
       a {
-        color: #b3b9c5;
+        color: #777c85;
+        &:hover {
+          background: #202020;
+          color: #b3b9c5;
+        }
+      }
+
+      .brand {
+        a {
+          color: #b3b9c5;
+        }
+      }
+
+      .links {
+        a {
+          &:hover {
+            background: #202020;
+            color: #b3b9c5;
+          }
+        }
+      }
+
+      .extra {
+        .nav-icon {
+          .github-icon {
+            color: #777c85;
+          }
+        }
       }
     }
-
-    a {
-      color: #777c85;
-    }
   }
-
   .post-title {
     color: #e2c891 !important;
   }
 
-  [type='text'] {
+  [type="text"] {
     background: #202020;
     border: 1px solid #202020;
     color: #b3b9c5;
@@ -826,33 +822,6 @@ button {
     background: #4a7baa;
     border: 1px solid #4a7baa;
     color: #fff !important;
-  }
-
-  .nav,
-  .nav-container {
-    .links {
-      a {
-        &:hover {
-          background: #202020;
-          color: #b3b9c5;
-        }
-      }
-    }
-
-    .extra {
-      .nav-icon {
-        .github-icon {
-          color: #777c85;
-        }
-      }
-
-      a {
-        &:hover {
-          background: #202020;
-          color: #b3b9c5;
-        }
-      }
-    }
   }
 
   .post {
@@ -883,33 +852,41 @@ button {
   }
 }
 
-@media (min-width: 700px) {
+#main-content {
+  min-height: calc(100vh - 170px);
+  padding: 2rem 0 0;
 
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 700px) {
   code {
     display: block;
     font-size: 14px;
     overflow: auto;
     padding: 1.5rem;
 
-    &[class*='language-'] {
+    &[class*="language-"] {
       font-size: 14px;
     }
   }
 
   pre {
-    &[class*='language-'] {
+    &[class*="language-"] {
       font-size: 14px;
     }
   }
 
   :not(pre) > code {
-    background: rgba(0, 0, 0, .06);
+    background: rgba(0, 0, 0, 0.06);
     border: 0;
     border-radius: 4px;
     font-weight: 400;
     padding: 3px 5px;
 
-    &[class*='language-'] {
+    &[class*="language-"] {
       border: 1px solid #333;
       padding: 3px 5px;
     }
@@ -933,7 +910,7 @@ button {
       .links {
         -ms-flex-pack: start;
         justify-content: flex-start;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
 
         a {
           font-size: 1.1rem;
@@ -959,15 +936,6 @@ button {
     //   }
     // }
   }
-
-  #main-content {
-    padding: 30px 0 0;
-
-    h1 {
-      text-align: left;
-    }
-  }
-
   h1 {
     font-size: 2rem;
   }
@@ -1023,6 +991,14 @@ button {
     font-size: 1rem;
   }
 
+  #main-content {
+    padding: 30px 0 0;
+
+    h1 {
+      text-align: left;
+    }
+  }
+
   #resources {
     h1 {
       margin-bottom: 2.3rem;
@@ -1039,11 +1015,15 @@ button {
     font-size: 1.1rem;
     height: 70px;
 
+    a {
+      padding: 0.7rem 1.1rem;
+    }
+
     .nav-container {
       height: 70px;
 
       .brand {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
 
         a {
           font-size: 1.1rem;
@@ -1059,27 +1039,19 @@ button {
 
         a {
           font-size: 1.1rem;
-          margin-right: .1rem;
+          margin-right: 0.1rem;
         }
       }
 
       .extra {
         .moon-icon {
-          margin-bottom: .2rem;
+          margin-bottom: 0.2rem;
         }
 
         svg {
-          margin-bottom: .3rem;
+          margin-bottom: 0.3rem;
         }
       }
-    }
-
-    a {
-      padding: .7rem 1.1rem;
-
-      // &.nav-icon {
-      //   padding: .4rem .6rem;
-      // }
     }
   }
 
@@ -1088,19 +1060,17 @@ button {
   }
 }
 
-
 //
 // Temporary fix for smaller screen sizes
 // : width of 320px and smaller
 
 @media (max-width: 320px) {
   .nav {
-
     .nav-container {
       padding: 4px;
       .links {
         padding-top: 0.2rem;
-        a{
+        a {
           margin-right: 0;
         }
       }
