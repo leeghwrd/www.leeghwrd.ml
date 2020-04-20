@@ -41,7 +41,9 @@
     "clean": "gatsby clean",
     "test": "jest",
     "lint_js": "eslint --config .eslintrc.js .",
-    "lint_js:fix": "eslint --config .eslintrc.js --fix ."
+    "lint_js:fix": "eslint --config .eslintrc.js --fix .",
+    "lint_scss": "stylelint -s scss 'src/scss/*.scss'",
+    "lint_scss:fix": "stylelint -s scss 'src/scss/*.scss' --fix"
   },
   "devDependencies": {
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
