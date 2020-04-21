@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       if (result.errors) {
         reject(result.errors);
       }
@@ -34,8 +34,8 @@ exports.createPages = ({ graphql, actions }) => {
           component: blogPostTemplate,
           context: {
             prev: index === 0 ? null : posts[index - 1].node,
-            next: index === posts.length - 1 ? null : posts[index + 1].node
-          }
+            next: index === posts.length - 1 ? null : posts[index + 1].node,
+          },
         });
       });
       resolve();

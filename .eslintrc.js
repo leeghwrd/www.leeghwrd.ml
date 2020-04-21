@@ -5,7 +5,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "prettier/react",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
   ],
   plugins: [
     "prettier",
@@ -19,20 +19,18 @@ module.exports = {
     "ecmaFeatures": {
       "impliedStrict": true,
       "classes": true,
-      "jsx": true
+      "jsx": true,
     }
   },
   env: {
     "browser": true,
     "es6": true,
     "node": true,
-    "jest/globals": true
+    "jest/globals": true,
   },
   settings: {
     react: {
-      "version": "latest"
+      "version": "latest",
     },
   },
-  rules: {
-  }
 };
