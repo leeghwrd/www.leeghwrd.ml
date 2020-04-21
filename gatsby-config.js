@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Lee Howard"
+    title: "Lee Howard",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -13,24 +13,24 @@ module.exports = {
       options: {
         files: [
           `${__dirname}/src/**/*.{js,jsx}`,
-          `${__dirname}/src/scss/**/*.{css,scss}`
-        ]
-      }
+          `${__dirname}/src/scss/**/*.{css,scss}`,
+        ],
+      },
     },
     "gatsby-plugin-eslint",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/articles`,
-        name: `articles`
-      }
+        name: `articles`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -39,8 +39,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800
-            }
+              maxWidth: 800,
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -75,11 +75,11 @@ module.exports = {
               showLineNumbers: false,
               // If setting this to true, the parser won't handle and highlight inline
               // code used in markdown i.e. single backtick code like `this`.
-              noInlineHighlight: true
-            }
-          }
-        ]
-      }
+              noInlineHighlight: true,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -90,8 +90,8 @@ module.exports = {
         background_color: "#285680",
         theme_color: "#285680",
         display: "fullscreen",
-        icon: "src/images/brand.svg" // This path is relative to the root of the site.
-      }
+        icon: "src/images/brand.svg", // This path is relative to the root of the site.
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
@@ -125,10 +125,10 @@ module.exports = {
           opengraph: false,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
+          windows: false,
+        },
+      },
     },
-    `gatsby-plugin-netlify`
-  ]
+    `gatsby-plugin-netlify`,
+  ],
 };
