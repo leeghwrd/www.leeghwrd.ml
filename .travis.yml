@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 10.19.0
+  - 12.16.2
+os: linux
+dist: bionic
+branches:
+  only:
+    - master
+script:
+  - npm run lint_js
+  - npm run lint_scss
+  - npm run test
+  - npm run build
