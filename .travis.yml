@@ -1,14 +1,35 @@
 language: node_js
 node_js:
-  - 10.19.0
-  - 12.16.2
+- 10.19.0
+- 12.16.2
 os: linux
 dist: bionic
 branches:
   only:
-    - master
+  - master
 script:
-  - npm run lint_js
-  - npm run lint_scss
-  - npm run test
-  - npm run build
+- npm run lint_js
+- npm run lint_scss
+- npm run test
+- npm run build
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_e45fda104ca4_key -iv $encrypted_e45fda104ca4_iv
+  -in scripts/leeghwrd_deploy.enc -out scripts/leeghwrd_deploy -d
+- eval "$(ssh-agent -s)"
+- cp scripts/leeghwrd_deploy ~/.ssh/leeghwrd_deploy
+- chmod 600 ~/.ssh/leeghwrd_deploy
+- ssh-add ~/.ssh/leeghwrd_deploy >/dev/null 2>&1
+- echo -e "Host ${DEPLOY_HOST}\n\tPort ${DEPLOY_PORT}\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+deploy:
+  provider: script
+  script: "./scripts/deploy.sh"
+  on:
+    branch: master
+  edge: true
+env:
+  global:
+  - secure: bJz519vVAnbymOqY8CCsuEB3ooE5OZvzcAjoQcXxVhPXZLi2+tlsoDeDGme7zp3R9kxTZKe0ZOFS5UTKK3WSW97ytRVndF5iKRQ9lC0Ab6pPPHHDJUx8Zi4SAVMJbgoWAuSvqv4uiJcu0WqkmshlJsJWWw6Mc65fSixVE+BFPx4j41C5ZJptig9HQQItYVVhg1hKL+HNzC2y/d3Uj4RtVR4kpHBDIlk63A9GmIlOYG+gRc/aYp2bcTn2n7pL3M1QsAOpDzIMaSov1yKO1eMza6FFXdrRQrFEfrvjZcGsGV83SUDwhZI5p+MywtroPOYmzKejFiMzjrGPaF5Cw5hs4amxIC4Pcvjwnj9nM0eiQ3xeguAS/mUrKhX9WsCHR1wxVVfJBaHE0DNj0vBcpgqrbgwTDHFvMcdW2aG/c43iYdCfn18fk9niY1XdV1W+yAkbM62PIMiwNi8XZQolI+14WmpGQgIVXzQnNkxALtsZHKBpb2qMTpS8lYCyS2yqFMgaAnN5BpqRGHs8RwcW1wkWUK9319w36wtzCt5aX2789A1fmUCi4kZ/xBvq2E8J5CcNNfWwmBbF/qJZEI4ViF1gQPPSq/5n/BQLS7GT+64Mk+lcK3I2LI1wz0Foe2erG+Tui0NJpt86rrdv3wi7kWdL8CiIG3X2UGFEjX/e3G892nI=
+  - secure: UefLmHkoAtHcVHjvhfHCkC+taj1VAr+W1uJ6aOPd5oUCYtDBP3rjCLy828XqE8K2BF7rrRB6MV+eRyAoKoZQb4yjpoOPxeiACgeCb8RuFO+yiSpuJpkT+LY2nLXKIvM7yVhUHq3GgfBVMD3c3XTmTUD3XdEv02kJqVWtmecm5wxnwQdEOYP37g8gPcl2p3Bmp4OBqALMi7j8NYMCYvdF0aVk5VP66srm33actWbxMNOOFwsrBisc3qA571U7onDrkT5hccabwQng7tAfDCw27nfV34ji2Bj1bj9pMMtQxT5ENXBDyKuvBTh1C0OFzrOImsZ1UYFyeoDPEiP0mZm7WAlSinRyYmDh7bIHe2+0KGfg66aGy9PSFpOMwLTCbJQSKYYgbRbo5249W9qiu3BiAzG9hZrQqjMXvBW15wNlle2cg66lCW7oRpTCuuudRWLeeLZeQAPsbnUJA9WAvGBQP89QokBpTBYnOxDmx628y9Z3lq0fiA+s9H0dX8G8+7M2CVug7CiTzBmNR+8+b/GbmwbVp/bv0GcEDorjyZaIB9AFhYGBx7UBpddj2ENsNtTUiDp0WdJuDPlgiAW09LRKOJ/cqDxrqaPJe78jhGkr7W7VLhKcROzBuUc9ml2uaWhLGPYQZEu+ze6959SHAL5N3QfoCrfavPj3+0l6L2tdWQI=
+  - secure: nE4j/SP3f+NwrhnEuT0hP6YSUTd2/ObEJLGcmwxScwygbxV6fb3gJ11+0t+2auz2zB3JQ4CeLdpW4Y+HsKOCyJruEa1Jmo7TeptVMDwhzrojxTvCbSRZ8qcSfxGwyuIBBhesnu1bGpCwsFph/BLkg5MHpD6Twy0cEV6E2wv4JzAAbig496AcXIC0nBahF7imNubretixCb7jDND7g0yN7FcgsIFzu9OhARoRKhxv97hRNZ+SIHA8fCfTjtaB1Q26HsbQ/d5ud3vyHr7w6Sck0MOvXJedQkZSRxim0ZOH0X3QMhaCUCzNDj+ZE7E6US2EjD8l4+vvBy1jXP8HCwRUc2uQCinXmA+p7jqETCS8YKLLFwzuxrguU/srTP5loYdG3AJVLTeyI74ELCGbqpEqMjRiAweJeP+dCsTI5j8IOHDIuxt9sLcd5rdkzwMstsceIbi4QAzjVHI3RGIWIStLqxts8pSiFoWNVX1zNFydmXENFiBMQYvnCyn44Ih9Ql5n2GV+QMdbTTG4gcwkZ2WQ3B9XyS/u50We9OjNPHx2XljFR/kh2BFgBL0JvyFpLraryNYTSY/Pyi0cEa3w4SOI22JqUfNhA+RwahfrU4QAxTqfYInQiGSJ7g4ZfKIH+tbjlmPrvF9fYzjSy2YGPWhhZF1JX8s7wqkCtbmh129HIsQ=
+  - secure: aPHCXZetEa92vyxG2YRGwHHcVa6gD+0a7dJEv+TErUCLLwRL+M5pzqzBgKPBpUa6gsBm/qj7a+Biht8z/OwsH0spC1bzPAJyjVqbkDhEJBHWkl3ewoI73msG4NCEF9hauAbrkf94CPOn/yYw1bO2aMQN4eFncZOrHnNOeMATWv7/KU/jXaGjANyleubhxa+8uUOK0H3riMOAnkEZeO62t9ACnzKZUcnDSVOA6pEHDOX9O7X1fvWH+vFa4fwXv/E8L6G7p34igzRIsTYfiA4nIIOvx4bn3D9NgAOr9LilwxwyRdcm0KWbniOZyTG6MfYTUqCbvutObV5BfxTIetgIZ4EBDZPPrmFuafyXdij3giqStXrfJ59KO4SzONUxpPFXbVPOT9rcnKVuHrg0BNEcp9vHZsiRwGLyv/24fIbMCbjB1aAke5PHdmRjbd5kwPOu4qQU58gDMFWKDUwWuObNj1EeDo0p9mPxM0hCGQA9+yjXCSmfVwbJ38SFwfMdxW6DfklLQxHRDgwIuqZIXVLSwyYFdTqwkCHe1yBfzP3WHmrMtdi+Nw+l7848wQpba7ajg+2Vpj3cqPpgf6261fmdWtKLeB/DZsDJ7t0yhWiPQsdA8ByGhCLWqg6zsK7+ozAeR47BMH+WYUg4xvysmO70VvYHqvvjvPNymQapMsjmhNM=
+  - secure: q6Fs/cgwMO0cpjrMe3whRGWeOkDcxB2kQwmK9mI2XK8h2Qdw6BrLZ2H+0sM2X7qvK4P/SIO6pSuOjxkPsCudXe8zZKQUHXO/2ff6XcM603N6F+1QUTNxKEQK5H8TIpNd4nnVQi0OpS+78fud9J603MpcXTy/egisD1IH0AGuuKXxyr/X1vJITqwBXMHCk8tP1ITS3hXRyskDKgaCVodLuFPMGibKTQ0PA0GrYOA2Ua9eAmYwSF9SdGNITIJ+XZ53ArCJbHQ4JlA++3j6n3rbX9IAIcArpavS8rmdqNrkN0BTqsrM9pHDAsbA/qcdiwwF9WZj7MAydkcpYOWlv0gpMCy2jhJZgCi6sPZeZkOE3VHD0a3XsxplQzRN5QB4Vckl4K+/bJ5kqqMQ0QgIlwJzNzc8QGfKnKU1FHkG6PdHwfsE9ozvczFoZjXIPtw9wyLhdEpBMEan/tetqcZb1rtW2Vr/tR8p9uFsXzznsUoX6OKsm9boWfMTHAmjTr/n/pO8bsL7aQ87thklcU+yMDbARwCu+Fts/z9EOK5PKpimxRWJGAzftC8gFtBxOWkxYCCpnEFpiORNqjG1uSNKFZd9N/hoR5uRl9yYNg2N3z9CRal/lV/BYlthf+1by6IOLIOgSEUHk9oSk3xSQ5XqhKkT1A5wwzcwO1LyqWeFaZlaHUo=

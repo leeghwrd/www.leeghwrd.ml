@@ -70,3 +70,5 @@ yarn-error.log
 
 // ignore all articles until heavy development is complete.
 //src/articles
+
+scripts/leeghwrd_deploy
