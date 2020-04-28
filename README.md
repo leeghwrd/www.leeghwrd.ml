@@ -1,28 +1,30 @@
+[![Build Status](https://travis-ci.com/leeghwrd/www.leeghwrd.ml.svg?branch=master)](https://travis-ci.com/leeghwrd/www.leeghwrd.ml)
+
 # Home of Lee Howard
 
-https://leeghwrd.ml
+https://www.leeghwrd.ml
 
 
 ## Installation
 
-** Use with node v10.19.0 only **
+** Works with node v10.19.0 or v12.16.2 **
 
 Clone repo:
 
 git
 ```shell
-git clone git@github.com:leeghwrd/leeghwrd.ml.git
+git clone git@github.com:leeghwrd/www.leeghwrd.ml.git
 ```
 
 https
 ```shell
-git clone https://github.com/leeghwrd/leeghwrd.ml.git
+git clone https://github.com/leeghwrd/www.leeghwrd.ml.git
 ```
 
 Install dependencies:
 
 ```bash
-cd leeghwrd.ml
+cd www.leeghwrd.ml
 ```
 
 ```bash
@@ -56,4 +58,3 @@ navigate to http://localhost:8080
 - [ ] fix scroll bar padding
 - [ ] comments.
 - [ ] highlight matching search results.
-- [✅] image sharp to include photo's in articles.
