@@ -2,12 +2,11 @@
 
 # Home of Lee Howard
 
-https://www.leeghwrd.ml
-
+<https://www.leeghwrd.ml>
 
 ## Installation
 
-** Works with node v10.19.0 or v12.16.2 **
+**Works with node v10.19.0 or v12.16.2**
 
 Clone repo:
 
@@ -37,11 +36,9 @@ npm run dev
 ```
 
 Open web browser:
-navigate to http://localhost:8000
-
+navigate to <http://localhost:8000>
 
 Or 
-
 
 Start mock production server:
 
@@ -50,11 +47,11 @@ npm start
 ```
 
 Open web browser:
-navigate to http://localhost:8080
+navigate to <http://localhost:8080>
 
 =================================================
 
-## TODO [last updated: 2.23.20]
+## TODO - last updated: 2.23.20
 - [ ] fix scroll bar padding
 - [ ] comments.
 - [ ] highlight matching search results.
