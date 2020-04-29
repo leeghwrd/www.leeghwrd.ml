@@ -9,10 +9,11 @@ description: >
   How I use conditional rendering of prev and next links,
   for my own personal site. 
 ---
-Using GatsbyJS for my personal site has been a pleasure. It's built on top of React. So pretty much most React documetation also apply to whats under the hood of GatsbyJS.
 
-
-Conditional rendering is very handy. Below is a snippet of code from my sites post template.
+Using GatsbyJS for my personal site has been a pleasure. It's built on top of
+React. So pretty much most React documetation also apply to whats under the
+hood of GatsbyJS. Conditional rendering is very handy. Below is a snippet of
+code from my sites post template.
 
 <div class="filename">src/templates/blog-post.js</div>
 

@@ -9,9 +9,11 @@ description: >
   Passing data around within an iOS app. There are many ways!
 ---
 
-Data needs to be passed around in your app. Regardless of what approach you take there will be pros and cons.
+Data needs to be passed around in your app. Regardless of what approach you
+take there will be pros and cons.
 
-I chose to use a DataService.swift file to centralize all relevant code. The outcome is below:
+I chose to use a DataService.swift file to centralize all relevant code. The
+outcome is below:
 
 <div class="filename">AppDelegate.swift</div>
 
@@ -27,7 +29,8 @@ let dataService = DataService.shared
     window?.makeKeyAndVisible()
 ```
 
-I intialized the rootviewController in the AppDelegate as a TabBarController, after deleting the storyboard and references to it.
+I intialized the rootviewController in the AppDelegate as a TabBarController,
+after deleting the storyboard and references to it.
 
 <div class="filename">Controller/MainTabBarController.swift</div>
 
@@ -94,8 +97,4 @@ func setupTabBar() {
   }
 ```
 
-This function uses an extension to init tab view controllers. 
-
-
-
-
+This function uses an extension to init tab view controllers.

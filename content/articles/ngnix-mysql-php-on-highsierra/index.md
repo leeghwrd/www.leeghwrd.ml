@@ -9,19 +9,30 @@ description: >
   How I installed php web development enviroment on my Macbook Pro. 
 ---
 
-Upon working up an idea to implement some added functionality to an existing website running on nginx. It was time to get busy and the first thing was to setup a development enviroment with the same stack.
+Upon working up an idea to implement some added functionality to an existing
+website running on nginx. It was time to get busy and the first thing was to
+setup a development enviroment with the same stack.
 
 ## Package Manager Choice
 
-I will admit I'm a longtime user of Macports and its already on my system so naturally thats my first choice. But I do know that packages from Mackports are sometimes a stable version if anything.
+I will admit I'm a longtime user of Macports and its already on my system so
+naturally thats my first choice. But I do know that packages from Mackports are
+sometimes a stable version if anything.
 
-Searching Macports for mysql and just as I suspected, I find version v5.7. I need to work with the latest version on this one, which should be v8.x.x.
+Searching Macports for mysql and just as I suspected, I find version v5.7. I
+need to work with the latest version on this one, which should be v8.x.x.
 
-Luckily, a few months ago, I installed Homebrew while working on one of my previous projects.
+Luckily, a few months ago, I installed Homebrew while working on one of my
+previous projects.
 
-Searching Homebrew, I find that mysql is at version 8.x.x. Ok so Homebrew it is. I have nothing against Homebrew its just that I learned macports first. Times change and I could be wrong but it was stated that both of these on one system warns that things can get wonky if your not careful. I chose one and stuck with it.
+Searching Homebrew, I find that mysql is at version 8.x.x. Ok so Homebrew it
+is. I have nothing against Homebrew its just that I learned macports first.
+Times change and I could be wrong but it was stated that both of these on one
+system warns that things can get wonky if your not careful. I chose one and
+stuck with it.
 
-I use Homebrew only for packages or new versions of a package that I can't get on macports. That has always worked for me.
+I use Homebrew only for packages or new versions of a package that I can't get
+on macports. That has always worked for me.
 
 ## Installation
 
@@ -32,7 +43,6 @@ I use Homebrew only for packages or new versions of a package that I can't get o
 ### Nginx
 
 Install nginx
-
 
 ```bash
 brew install nginx
@@ -73,10 +83,10 @@ start Nginx
 brew services start nginx
 ```
 
-Now that nginx is installed and running lets open up the browser and point it to localhost:8080. 
+Now that nginx is installed and running lets open up the browser and point it
+to <localhost:8080>. 
 
 Welcome to nginx!
-
 
 ### PHP
 
@@ -111,9 +121,10 @@ and insert this simple snippet to test if nginx is loading php files correctly.
 <?php infophp(); ?>
 ```
 
+Now we need to enable php within the nginx.conf file. At appoximatly line 63,
+enable the PHP FastCGI location block. Also prepend $document\_root to
+fastcgi\_param like below.
 
-
-Now we need to enable php within the nginx.conf file. At appoximatly line 63, enable the PHP FastCGI location block. Also prepend $document\_root to fastcgi\_param like below.
 <div class="filename">/usr/local/etc/nginx.conf</div>
 
 ```bash
@@ -131,7 +142,7 @@ Now we need to enable php within the nginx.conf file. At appoximatly line 63, en
 ### MySQL
 
 Install mysql 
-```
+```bash
 brew install mysql
 ```
 
@@ -160,7 +171,6 @@ Configure mysql
 ```bash
 mysql_secure_installation
 ```
-
 
 Login mysql
 ```bash
