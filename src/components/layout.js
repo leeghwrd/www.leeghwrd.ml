@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 import Footer from "./footer";
@@ -10,42 +10,46 @@ import "../scss/layout.scss";
 
 import ThemeContext from "../context/ThemeContext";
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
+const Layout = ({ children }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
         site {
           siteMetadata {
             title
           }
         }
       }
-    `}
-    render={(data) => (
-      <ThemeContext.Consumer>
-        {(theme) => (
-          <div className={theme.dark ? "dark" : "light"}>
-            <Helmet
-              title={data.site.siteMetadata.title}
-              meta={[
-                { name: "description", content: "Sample" },
-                { name: "keywords", content: "sample, something" },
-              ]}
-            >
-              <html lang="en" />
-            </Helmet>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <main id="main-content">
-              <div className="container">{children}</div>
-            </main>
+    `
+  );
 
-            <Footer />
-          </div>
-        )}
-      </ThemeContext.Consumer>
-    )}
-  />
-);
+  return (
+    <ThemeContext.Consumer>
+      {(theme) => (
+        <div className={theme.dark ? "dark" : "light"}>
+          <Helmet
+            title={site.siteMetadata.title}
+            meta={[
+              { name: "description", content: "Home of Lee Howard" },
+              {
+                name: "keywords",
+                content: "development, c, c++, javascript, react,",
+              },
+            ]}
+          >
+            <html lang="en" />
+          </Helmet>
+          <Header siteTitle={site.siteMetadata.title} />
+          <main id="main-content">
+            <div className="container">{children}</div>
+          </main>
+
+          <Footer />
+        </div>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
