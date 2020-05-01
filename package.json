@@ -47,6 +47,8 @@
   },
   "devDependencies": {
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
     "babel-preset-gatsby": "^0.3.3",
@@ -64,7 +66,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.4.0",
     "prettier": "^2.0.4",
-    "react-test-renderer": "^16.13.1",
     "remark-cli": "^8.0.0",
     "remark-frontmatter": "^2.0.0",
     "remark-preset-lint-consistent": "^3.0.0",
