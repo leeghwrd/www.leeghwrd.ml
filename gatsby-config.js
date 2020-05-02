@@ -90,7 +90,7 @@ module.exports = {
         background_color: "#285680",
         theme_color: "#285680",
         display: "fullscreen",
-        icon: "src/images/brand.svg", // This path is relative to the root of the site.
+        icon: "src/images/brand.png", // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -99,7 +99,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/favicon.svg",
+        logo: "./src/favicon.png",
 
         // WebApp Manifest Configuration
         appName: null, // Inferred with your package.json
