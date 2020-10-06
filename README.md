@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.com/leeghwrd/www.leeghwrd.ml.svg?branch=master)](https://travis-ci.com/leeghwrd/www.leeghwrd.ml)
 
-# Home of Lee Howard
+# Home of Lee G. Howard
 
-<https://www.leeghwrd.ml>
+<https://leegibsonhoward.com>
 
 ## Installation
 
