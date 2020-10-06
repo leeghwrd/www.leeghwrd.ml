@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Lee Howard",
+    title: "Lee G. Howard",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -84,7 +84,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Lee Howard",
+        name: "Lee G. Howard",
         short_name: "leeghwrd",
         start_url: "/",
         background_color: "#285680",

@@ -1,8 +1,8 @@
 {
-  "name": "www.leeghwrd.ml",
-  "description": "Home of Lee Howard",
+  "name": "leegibsonhoward.com",
+  "description": "Home of Lee G. Howard",
   "version": "0.9.0",
-  "author": "leeghwrd <leeghwrd@gmail.com>",
+  "author": "leegibsonhoward <leegibsonhoward@gmail.com>",
   "dependencies": {
     "gatsby": "^2.20.26",
     "gatsby-cli": "^2.11.12",
@@ -80,6 +80,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leeghwrd/www.leeghwrd.ml.git"
+    "url": "https://github.com/leegibsonhoward/leegibsonhoward.com.git"
   }
 }

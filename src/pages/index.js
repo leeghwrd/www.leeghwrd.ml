@@ -38,12 +38,15 @@ export default function HomeIndex({ data }) {
           Projects
           <a
             className="view-all"
-            href="https://github.com/leeghwrd?tab=repositories"
+            href="https://github.com/leegibsonhoward?tab=repositories"
           >
             view all
           </a>
         </h2>
-        <a className="post" href="https://github.com/leeghwrd/CocktailsDB">
+        <a
+          className="post"
+          href="https://github.com/leegibsonhoward/CocktailsDB"
+        >
           <div className="post-thumbnail">
             <FaBeer />
           </div>
