@@ -1,10 +1,13 @@
 {
-    "buildpacks": [
-      {
-        "url": "heroku/nodejs"
-      },
-      {
-        "url": "https://github.com/heroku/heroku-buildpack-static"
-      }
+  "name": "leeghwrd-staging",
+
+  "scripts": {},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
     ]
   }
