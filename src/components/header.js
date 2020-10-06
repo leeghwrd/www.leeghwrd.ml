@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => (
                 )}
               </button>
               <a
-                href="https://github.com/leeghwrd"
+                href="https://github.com/leegibsonhoward"
                 aria-label="github"
                 className="nav-icon"
                 target="_blank"
@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => (
                 <FaGithub className="github-icon" />
               </a>
               <a
-                href="https://twitter.com/leeghwrd"
+                href="https://twitter.com/leegibsonhoward"
                 aria-label="twitter"
                 className="nav-icon"
                 target="_blank"

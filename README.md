@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/leeghwrd/www.leeghwrd.ml.svg?branch=master)](https://travis-ci.com/leeghwrd/www.leeghwrd.ml)
+[![Build Status](https://travis-ci.com/leegibsonhoward/leegibsonhoward.com.svg?branch=master)](https://travis-ci.com/leegibsonhoward/leegibsonhoward.com)
 
 # Home of Lee G. Howard
 
@@ -12,18 +12,18 @@ Clone repo:
 
 git
 ```shell
-git clone git@github.com:leeghwrd/www.leeghwrd.ml.git
+git clone git@github.com:leegibsonhoward/leegibsonhoward.com.git
 ```
 
 https
 ```shell
-git clone https://github.com/leeghwrd/www.leeghwrd.ml.git
+git clone https://github.com/leegibsonhoward/leegibsonhoward.com.git
 ```
 
 Install dependencies:
 
 ```bash
-cd www.leeghwrd.ml
+cd leegibsonhoward.com
 ```
 
 ```bash
