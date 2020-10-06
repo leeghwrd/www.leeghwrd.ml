@@ -1,7 +1,4 @@
 {
-  "name": "leeghwrd-staging",
-
-  "scripts": {},
   "buildpacks": [
     {
       "url": "heroku/nodejs"
