@@ -25,7 +25,11 @@ const Header = ({ siteTitle }) => (
               <Link to="/resources/">Resources</Link>
             </div>
             <div className="extra">
-              <button className="dark-switcher" onClick={theme.toggleDark}>
+              <button
+                className="dark-switcher"
+                aria-label="dark switcher"
+                onClick={theme.toggleDark}
+              >
                 {theme.dark ? (
                   <FaSun className="sun-icon" />
                 ) : (
