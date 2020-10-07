@@ -4,6 +4,14 @@
 
 <https://leegibsonhoward.com>
 
+## Repo Archived
+
+My focus of software development has evolved and as a side effect,
+I switched blogging platforms and will no longer be maintaining
+this blog made with Gatsby JS.
+
+But for any developers intersted in looking at the code can do so.
+
 ## Installation
 
 **Works with node v10.19.0 or v12.16.2**
